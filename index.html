@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Mock Interview</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #0f0f18;
+    --bg3: #141420;
+    --surface: #1a1a28;
+    --surface2: #222235;
+    --border: #2a2a40;
+    --border2: #3a3a55;
+    --accent: #6c63ff;
+    --accent2: #8b83ff;
+    --accent-dim: rgba(108,99,255,0.15);
+    --accent-glow: rgba(108,99,255,0.08);
+    --text: #e8e8f0;
+    --text2: #9090b0;
+    --text3: #5a5a78;
+    --green: #3ecf8e;
+    --green-dim: rgba(62,207,142,0.12);
+    --red: #ff6b6b;
+    --red-dim: rgba(255,107,107,0.12);
+    --amber: #f5a623;
+    --amber-dim: rgba(245,166,35,0.12);
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Onest', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .screen { display: none; position: relative; z-index: 1; }
+  .screen.active { display: flex; }
+
+  /* ══════════════════════════════════════
+     SCREEN 1 — SETUP
+  ══════════════════════════════════════ */
+  #screen-setup {
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+  }
+
+  .logo {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--text3);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .logo span { color: var(--accent); }
+
+  .setup-hero {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .setup-hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .setup-hero h1 em {
+    font-style: normal;
+    color: var(--accent2);
+  }
+
+  .setup-hero p {
+    color: var(--text2);
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .setup-card {
+    width: 100%;
+    max-width: 680px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 16px;
+  }
+
+  .setup-card h2 {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 20px;
+    font-family: var(--mono);
+  }
+
+  /* Quick start buttons */
+  .quick-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .quick-btn {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+  }
+
+  .quick-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+  }
+
+  .quick-btn .qb-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .quick-btn .qb-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .quick-btn .qb-sub {
+    font-size: 12px;
+    color: var(--text2);
+  }
+
+  /* Mode tabs */
+  .mode-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .mode-tab {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text2);
+    transition: all 0.2s;
+    text-align: center;
+    font-family: var(--sans);
+  }
+
+  .mode-tab:hover { border-color: var(--border2); color: var(--text); }
+  .mode-tab.active { border-color: var(--accent); background: var(--accent-dim); color: var(--accent2); }
+
+  /* Intensity */
+  .intensity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .intensity-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--bg3);
+  }
+
+  .intensity-card:hover { border-color: var(--border2); }
+  .intensity-card.active { border-color: var(--accent); background: var(--accent-dim); }
+
+  .intensity-card .ic-title {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .intensity-card.active .ic-title { color: var(--accent2); }
+
+  .intensity-card .ic-sub {
+    font-size: 11px;
+    color: var(--text3);
+    font-family: var(--mono);
+  }
+
+  /* Topics */
+  .topics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .topic-chip {
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: var(--text2);
+    background: var(--bg3);
+    font-family: var(--mono);
+    letter-spacing: 0.03em;
+  }
+
+  .topic-chip:hover { border-color: var(--border2); color: var(--text); }
+
+  .topic-chip.active {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    color: var(--accent2);
+  }
+
+  .topic-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .topic-action-btn {
+    font-size: 11px;
+    color: var(--text3);
+    cursor: pointer;
+    font-family: var(--mono);
+    background: none;
+    border: none;
+    transition: color 0.15s;
+  }
+  .topic-action-btn:hover { color: var(--accent2); }
+
+  /* Start button */
+  .start-btn {
+    width: 100%;
+    max-width: 680px;
+    padding: 18px;
+    border-radius: 16px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--sans);
+    letter-spacing: -0.01em;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .start-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+    pointer-events: none;
+  }
+
+  .start-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 32px rgba(108,99,255,0.4); }
+  .start-btn:active { transform: translateY(0); }
+  .start-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  /* ══════════════════════════════════════
+     SCREEN 2 — INTERVIEW
+  ══════════════════════════════════════ */
+  #screen-interview {
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .interview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .interview-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse-dot 2s infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .session-timer {
+    font-family: var(--mono);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .progress-info {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text3);
+  }
+
+  .progress-info span { color: var(--text2); }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--accent2);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+  }
+
+  .end-btn {
+    font-size: 12px;
+    color: var(--text3);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-family: var(--mono);
+    transition: all 0.15s;
+  }
+  .end-btn:hover { border-color: var(--red); color: var(--red); }
+
+  /* Progress bar */
+  .progress-bar-wrap {
+    height: 2px;
+    background: var(--border);
+    position: sticky;
+    top: 69px;
+    z-index: 9;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.5s ease;
+    box-shadow: 0 0 8px var(--accent);
+  }
+
+  /* Interview content */
+  .interview-content {
+    flex: 1;
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Question block */
+  .question-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    position: relative;
+  }
+
+  .question-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    border-radius: 18px 18px 0 0;
+  }
+
+  .question-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text3);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .question-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+
+  /* AI bubble */
+  .ai-bubble {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .ai-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent2);
+    font-weight: 700;
+  }
+
+  .ai-message {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 18px;
+    font-size: 15px;
+    color: var(--text2);
+    line-height: 1.6;
+    flex: 1;
+    border-left: 2px solid var(--accent);
+    border-radius: 0 14px 14px 14px;
+  }
+
+  /* Thinking animation */
+  .thinking {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 4px 0;
+  }
+
+  .thinking span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent2);
+    animation: think 1.2s infinite;
+  }
+
+  .thinking span:nth-child(2) { animation-delay: 0.2s; }
+  .thinking span:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes think {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-6px); opacity: 1; }
+  }
+
+  /* Voice input */
+  .voice-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+  }
+
+  .voice-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .mic-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+  }
+
+  .mic-btn:hover { border-color: var(--accent); background: var(--accent-dim); }
+
+  .mic-btn.listening {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 8px rgba(108,99,255,0.15);
+    animation: mic-pulse 1.5s infinite;
+  }
+
+  @keyframes mic-pulse {
+    0%, 100% { box-shadow: 0 0 0 8px rgba(108,99,255,0.15); }
+    50% { box-shadow: 0 0 0 16px rgba(108,99,255,0.05); }
+  }
+
+  .mic-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--text2);
+  }
+
+  .mic-btn.listening .mic-icon { fill: white; }
+
+  .waveform {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 40px;
+  }
+
+  .wave-bar {
+    width: 3px;
+    border-radius: 2px;
+    background: var(--border2);
+    transition: height 0.1s, background 0.2s;
+  }
+
+  .waveform.active .wave-bar {
+    background: var(--accent);
+    animation: wave-anim 0.6s infinite alternate;
+  }
+
+  .wave-bar:nth-child(2n) { animation-delay: 0.1s; }
+  .wave-bar:nth-child(3n) { animation-delay: 0.2s; }
+  .wave-bar:nth-child(4n) { animation-delay: 0.15s; }
+
+  @keyframes wave-anim {
+    from { height: 4px; }
+    to { height: 24px; }
+  }
+
+  .voice-status {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.05em;
+  }
+
+  /* Transcript */
+  .transcript-box {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text2);
+    min-height: 52px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  .transcript-box.empty { color: var(--text3); font-style: italic; }
+
+  /* Action buttons */
+  .action-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-skip {
+    flex: 1;
+    padding: 13px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text2);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: var(--sans);
+  }
+
+  .btn-skip:hover { border-color: var(--border2); color: var(--text); }
+
+  .btn-send {
+    flex: 2;
+    padding: 13px;
+    border-radius: 12px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--sans);
+  }
+
+  .btn-send:hover { background: var(--accent2); }
+  .btn-send:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* ══════════════════════════════════════
+     SCREEN 3 — RESULTS
+  ══════════════════════════════════════ */
+  #screen-results {
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+  }
+
+  .results-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .results-header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .results-header p {
+    color: var(--text2);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 680px;
+    margin-bottom: 24px;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .stat-card .stat-num {
+    font-size: 36px;
+    font-weight: 600;
+    font-family: var(--mono);
+    margin-bottom: 4px;
+  }
+
+  .stat-card .stat-label {
+    font-size: 11px;
+    color: var(--text3);
+    font-family: var(--mono);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .stat-card.green .stat-num { color: var(--green); }
+  .stat-card.red .stat-num { color: var(--red); }
+  .stat-card.amber .stat-num { color: var(--amber); }
+
+  .feedback-card {
+    width: 100%;
+    max-width: 680px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 16px;
+  }
+
+  .feedback-card h3 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--text3);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .feedback-text {
+    font-size: 15px;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+
+  .weak-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .weak-chip {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-family: var(--mono);
+  }
+
+  .weak-chip.red { background: var(--red-dim); color: var(--red); border: 1px solid rgba(255,107,107,0.3); }
+  .weak-chip.amber { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(245,166,35,0.3); }
+
+  .results-actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .btn-again {
+    flex: 1;
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--sans);
+  }
+
+  .btn-again:hover { border-color: var(--border2); }
+
+  .btn-new {
+    flex: 2;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--sans);
+  }
+
+  .btn-new:hover { background: var(--accent2); box-shadow: 0 8px 32px rgba(108,99,255,0.3); }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+  /* ── LOADING ── */
+  .loading-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,15,0.85);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    backdrop-filter: blur(8px);
+  }
+
+  .loading-overlay.active { display: flex; }
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--border2);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .loading-text {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text3);
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+
+<!-- LOADING -->
+<div class="loading-overlay" id="loading">
+  <div class="loading-spinner"></div>
+  <div class="loading-text" id="loading-text">инициализация...</div>
+</div>
+
+<!-- ══ SCREEN 1: SETUP ══ -->
+<div class="screen active" id="screen-setup">
+  <div style="width:100%;max-width:680px;margin:0 auto;display:flex;flex-direction:column;align-items:center;">
+
+    <div class="logo"><span>//</span> ml mock interview</div>
+
+    <div class="setup-hero">
+      <h1>Готов к <em>собесу?</em></h1>
+      <p>Голосовой тренажёр для NLP/LLM инженера</p>
+    </div>
+
+    <!-- Quick start -->
+    <div class="setup-card">
+      <h2>// быстрый старт</h2>
+      <div class="quick-btns">
+        <div class="quick-btn" onclick="quickStart('nlp')">
+          <div class="qb-label">full interview</div>
+          <div class="qb-title">Собес NLP/LLM</div>
+          <div class="qb-sub">DL + NLP + продвинутые · ~40 мин</div>
+        </div>
+        <div class="quick-btn" onclick="quickStart('python')">
+          <div class="qb-label">coding prep</div>
+          <div class="qb-title">Python + Алгосы</div>
+          <div class="qb-sub">Python теория · ~25 мин</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom -->
+    <div class="setup-card">
+      <h2>// кастомный собес</h2>
+
+      <!-- Level -->
+      <div style="margin-bottom:20px;">
+        <div style="font-size:11px;color:var(--text3);font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">уровень</div>
+        <div class="mode-tabs">
+          <div class="mode-tab active" data-level="base" onclick="selectLevel(this)">База</div>
+          <div class="mode-tab" data-level="advanced" onclick="selectLevel(this)">Продвинутые</div>
+          <div class="mode-tab" data-level="mix" onclick="selectLevel(this)">Микс</div>
+        </div>
+      </div>
+
+      <!-- Intensity -->
+      <div style="margin-bottom:20px;">
+        <div style="font-size:11px;color:var(--text3);font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">интенсивность</div>
+        <div class="intensity-grid">
+          <div class="intensity-card active" data-intensity="normal" onclick="selectIntensity(this)">
+            <div class="ic-title">Обычный</div>
+            <div class="ic-sub">20–25 вопросов</div>
+          </div>
+          <div class="intensity-card" data-intensity="hard" onclick="selectIntensity(this)">
+            <div class="ic-title">Жёсткий квиз</div>
+            <div class="ic-sub">30–40 вопросов</div>
+          </div>
+          <div class="intensity-card" data-intensity="quick" onclick="selectIntensity(this)">
+            <div class="ic-title">Быстрый</div>
+            <div class="ic-sub">10–15 вопросов</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Topics -->
+      <div>
+        <div style="font-size:11px;color:var(--text3);font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">темы</div>
+        <div class="topics-grid" id="topics-grid">
+          <!-- populated by JS -->
+        </div>
+        <div class="topic-actions">
+          <button class="topic-action-btn" onclick="selectAllTopics()">выбрать все</button>
+          <button class="topic-action-btn" onclick="clearTopics()">сбросить</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="start-btn" id="start-btn" onclick="startSession()" disabled>
+      Начать собес
+    </button>
+
+  </div>
+</div>
+
+<!-- ══ SCREEN 2: INTERVIEW ══ -->
+<div class="screen" id="screen-interview">
+
+  <div class="interview-header">
+    <div class="interview-header-left">
+      <div class="live-dot"></div>
+      <div class="session-timer" id="session-timer">00:00</div>
+      <div class="progress-info">вопрос <span id="q-current">1</span> / <span id="q-total">20</span></div>
+    </div>
+    <div class="header-right">
+      <div class="section-badge" id="section-badge">attention</div>
+      <button class="end-btn" onclick="endSession()">завершить</button>
+    </div>
+  </div>
+
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+  </div>
+
+  <div class="interview-content">
+
+    <!-- Question -->
+    <div class="question-block" id="question-block">
+      <div class="question-num" id="question-num">// вопрос 01</div>
+      <div class="question-text" id="question-text">Загрузка вопроса...</div>
+    </div>
+
+    <!-- AI followup -->
+    <div class="ai-bubble" id="ai-bubble" style="display:none;">
+      <div class="ai-avatar">AI</div>
+      <div class="ai-message" id="ai-message">
+        <div class="thinking" id="thinking">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Voice input -->
+    <div class="voice-block">
+      <div class="voice-row">
+        <button class="mic-btn" id="mic-btn" onclick="toggleMic()">
+          <svg class="mic-icon" viewBox="0 0 24 24">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12" y1="19" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="8" y1="23" x2="16" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="waveform" id="waveform">
+          <div class="wave-bar" style="height:4px"></div>
+          <div class="wave-bar" style="height:8px"></div>
+          <div class="wave-bar" style="height:6px"></div>
+          <div class="wave-bar" style="height:12px"></div>
+          <div class="wave-bar" style="height:5px"></div>
+          <div class="wave-bar" style="height:10px"></div>
+          <div class="wave-bar" style="height:7px"></div>
+          <div class="wave-bar" style="height:14px"></div>
+          <div class="wave-bar" style="height:6px"></div>
+          <div class="wave-bar" style="height:9px"></div>
+          <div class="wave-bar" style="height:4px"></div>
+          <div class="wave-bar" style="height:11px"></div>
+          <div class="wave-bar" style="height:8px"></div>
+          <div class="wave-bar" style="height:6px"></div>
+          <div class="wave-bar" style="height:10px"></div>
+        </div>
+        <div class="voice-status" id="voice-status">нажми для ответа</div>
+      </div>
+
+      <div class="transcript-box empty" id="transcript-box">твой ответ появится здесь...</div>
+
+      <div class="action-row">
+        <button class="btn-skip" onclick="skipQuestion()">не знаю / дальше</button>
+        <button class="btn-send" id="btn-send" onclick="sendAnswer()" disabled>отправить ответ →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ SCREEN 3: RESULTS ══ -->
+<div class="screen" id="screen-results">
+  <div style="width:100%;max-width:680px;display:flex;flex-direction:column;align-items:center;">
+
+    <div class="results-header">
+      <h1>Итоги сессии</h1>
+      <p id="results-meta">nlp/llm · база · 38 мин</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num" id="stat-total">0</div>
+        <div class="stat-label">вопросов</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-num" id="stat-strong">0</div>
+        <div class="stat-label">сильных</div>
+      </div>
+      <div class="stat-card red">
+        <div class="stat-num" id="stat-weak">0</div>
+        <div class="stat-label">пробелов</div>
+      </div>
+    </div>
+
+    <div class="feedback-card">
+      <h3>// разбор сессии</h3>
+      <div class="feedback-text" id="feedback-text">Генерация фидбека...</div>
+    </div>
+
+    <div class="feedback-card">
+      <h3>// повторить в следующий раз</h3>
+      <div class="weak-chips" id="weak-chips">
+        <!-- populated by JS -->
+      </div>
+    </div>
+
+    <div class="results-actions">
+      <button class="btn-again" onclick="showSetup()">← новый собес</button>
+      <button class="btn-new" onclick="downloadFeedback()">скачать фидбек .md</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script>
+// ══════════════════════════════════════
+// STATE
+// ══════════════════════════════════════
+const state = {
+  questions: [],
+  session: {
+    mode: 'custom',
+    level: 'base',
+    intensity: 'normal',
+    topics: new Set(),
+    plan: [],
+    current: 0,
+    history: [],
+    scores: [],
+    startTime: null,
+    timerInterval: null,
+  }
+};
+
+const TOPICS = [
+  { key: 'data_types',             label: 'data types',          cat: 'Python' },
+  { key: 'functions_iterators',    label: 'functions',           cat: 'Python' },
+  { key: 'oop',                    label: 'oop',                 cat: 'Python' },
+  { key: 'async_parallel',         label: 'async',               cat: 'Python' },
+  { key: 'linear_regression',      label: 'linear regression',   cat: 'ML' },
+  { key: 'regularization',         label: 'regularization',      cat: 'ML' },
+  { key: 'overfitting',            label: 'overfitting',         cat: 'ML' },
+  { key: 'classification_metrics', label: 'metrics',             cat: 'ML' },
+  { key: 'logistic_regression',    label: 'logistic regression', cat: 'ML' },
+  { key: 'gradient_descent',       label: 'gradient descent',    cat: 'ML' },
+  { key: 'decision_trees',         label: 'decision trees',      cat: 'ML' },
+  { key: 'random_forest',          label: 'random forest',       cat: 'ML' },
+  { key: 'gradient_boosting',      label: 'boosting',            cat: 'ML' },
+  { key: 'normalization',          label: 'normalization',       cat: 'Deep Learning' },
+  { key: 'regularization_stability', label: 'reg stability',     cat: 'Deep Learning' },
+  { key: 'optimizers',             label: 'optimizers',          cat: 'Deep Learning' },
+  { key: 'activations',            label: 'activations',         cat: 'Deep Learning' },
+  { key: 'training',               label: 'training',            cat: 'Deep Learning' },
+  { key: 'pytorch',                label: 'pytorch',             cat: 'Deep Learning' },
+  { key: 'classic_nlp',            label: 'classic nlp',         cat: 'NLP/LLM' },
+  { key: 'attention',              label: 'attention',           cat: 'NLP/LLM' },
+  { key: 'transformer',            label: 'transformer',         cat: 'NLP/LLM' },
+  { key: 'llm_inference',          label: 'llm inference',       cat: 'NLP/LLM' },
+  { key: 'quality_metrics',        label: 'quality metrics',     cat: 'NLP/LLM' },
+  { key: 'fine_tuning',            label: 'fine-tuning',         cat: 'NLP/LLM' },
+  { key: 'rag',                    label: 'rag',                 cat: 'NLP/LLM' },
+  { key: 'agents',                 label: 'agents',              cat: 'NLP/LLM' },
+  { key: 'llm_optimization',       label: 'llm optimization',    cat: 'NLP/LLM' },
+  { key: 'alignment',              label: 'alignment',           cat: 'NLP/LLM' },
+  { key: 'retrieval_embeddings',   label: 'retrieval',           cat: 'Продвинутые' },
+  { key: 'sentence_embeddings',    label: 'sentence embeddings', cat: 'Продвинутые' },
+  { key: 'seq2seq_generation',     label: 'seq2seq',             cat: 'Продвинутые' },
+  { key: 'flash_attention',        label: 'flash attention',     cat: 'Продвинутые' },
+  { key: 'prompting_safety',       label: 'prompting',           cat: 'Продвинутые' },
+  { key: 'serving_production',     label: 'serving',             cat: 'Продвинутые' },
+  { key: 'llm_evals',              label: 'evals',               cat: 'Продвинутые' },
+  { key: 'practical_finetuning',   label: 'practical finetuning',cat: 'Продвинутые' },
+  { key: 'production_reasoning',   label: 'prod reasoning',      cat: 'Продвинутые' },
+  { key: 'reasoning_models',       label: 'reasoning models',    cat: 'Продвинутые' },
+  { key: 'large_model_training',   label: 'large model training',cat: 'Продвинутые' },
+  { key: 'grpo_advanced',          label: 'grpo advanced',       cat: 'Продвинутые' },
+  { key: 'llm_labeling',           label: 'llm labeling',        cat: 'System Design' },
+  { key: 'text_classification',    label: 'classification',      cat: 'System Design' },
+  { key: 'clustering',             label: 'clustering',          cat: 'System Design' },
+  { key: 'ner',                    label: 'ner',                 cat: 'System Design' },
+  { key: 'domain_adaptation',      label: 'domain adaptation',   cat: 'System Design' },
+  { key: 'search_systems',         label: 'search',              cat: 'System Design' },
+  { key: 'rag_advanced',           label: 'rag advanced',        cat: 'System Design' },
+  { key: 'agents_advanced',        label: 'agents advanced',     cat: 'System Design' },
+];
+
+// ══════════════════════════════════════
+// INIT
+// ══════════════════════════════════════
+async function init() {
+  await loadQuestions();
+  renderTopics();
+}
+
+async function loadQuestions() {
+  try {
+    const res = await fetch('questions.json');
+    const data = await res.json();
+    state.questions = data.questions;
+    console.log(`Loaded ${state.questions.length} questions`);
+  } catch(e) {
+    console.error('Failed to load questions.json', e);
+  }
+}
+
+function renderTopics() {
+  const grid = document.getElementById('topics-grid');
+  grid.innerHTML = '';
+  const groups = {};
+  TOPICS.forEach(t => {
+    if (!groups[t.cat]) groups[t.cat] = [];
+    groups[t.cat].push(t);
+  });
+  Object.entries(groups).forEach(([cat, topics]) => {
+    const groupDiv = document.createElement('div');
+    groupDiv.style.cssText = 'width:100%;margin-top:10px;margin-bottom:4px;';
+    const label = document.createElement('div');
+    label.style.cssText = 'font-size:10px;color:var(--text3);font-family:var(--mono);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px;';
+    label.textContent = cat;
+    groupDiv.appendChild(label);
+    const chipsRow = document.createElement('div');
+    chipsRow.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;';
+    topics.forEach(t => {
+      const chip = document.createElement('div');
+      chip.className = 'topic-chip';
+      chip.dataset.key = t.key;
+      chip.textContent = t.label;
+      chip.onclick = () => toggleTopic(chip, t.key);
+      chipsRow.appendChild(chip);
+    });
+    groupDiv.appendChild(chipsRow);
+    grid.appendChild(groupDiv);
+  });
+}
+
+// ══════════════════════════════════════
+// SETUP CONTROLS
+// ══════════════════════════════════════
+function selectLevel(el) {
+  document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  state.session.level = el.dataset.level;
+}
+
+function selectIntensity(el) {
+  document.querySelectorAll('.intensity-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  state.session.intensity = el.dataset.intensity;
+}
+
+function toggleTopic(el, key) {
+  if (state.session.topics.has(key)) {
+    state.session.topics.delete(key);
+    el.classList.remove('active');
+  } else {
+    state.session.topics.add(key);
+    el.classList.add('active');
+  }
+  updateStartBtn();
+}
+
+function selectAllTopics() {
+  TOPICS.forEach(t => {
+    state.session.topics.add(t.key);
+    document.querySelector(`[data-key="${t.key}"]`)?.classList.add('active');
+  });
+  updateStartBtn();
+}
+
+function clearTopics() {
+  state.session.topics.clear();
+  document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('active'));
+  updateStartBtn();
+}
+
+function updateStartBtn() {
+  document.getElementById('start-btn').disabled = state.session.topics.size === 0;
+}
+
+function quickStart(mode) {
+  if (mode === 'nlp') {
+    const nlpTopics = ['attention','transformer','llm_inference','fine_tuning','rag',
+                       'agents','alignment','normalization','optimizers','training',
+                       'retrieval_embeddings','serving_production','llm_evals','practical_finetuning'];
+    nlpTopics.forEach(k => {
+      state.session.topics.add(k);
+      document.querySelector(`[data-key="${k}"]`)?.classList.add('active');
+    });
+    state.session.level = 'mix';
+    document.querySelectorAll('.mode-tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.level === 'mix');
+    });
+  } else {
+    const pyTopics = ['data_types','functions_iterators','oop','async_parallel'];
+    pyTopics.forEach(k => {
+      state.session.topics.add(k);
+      document.querySelector(`[data-key="${k}"]`)?.classList.add('active');
+    });
+    state.session.level = 'base';
+    document.querySelectorAll('.mode-tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.level === 'base');
+    });
+  }
+  updateStartBtn();
+  document.getElementById('start-btn').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ══════════════════════════════════════
+// SESSION START
+// ══════════════════════════════════════
+async function startSession() {
+  showLoading('составляю план собеса...');
+
+  const pool = state.questions.filter(q => {
+    const topicMatch = state.session.topics.has(q.section);
+    const levelMatch = state.session.level === 'mix' ? true :
+                       state.session.level === 'base' ? q.level === 'base' :
+                       q.level === 'advanced';
+    return topicMatch && levelMatch;
+  });
+
+  if (pool.length === 0) {
+    hideLoading();
+    alert('Нет вопросов для выбранных тем. Выбери другие темы.');
+    return;
+  }
+
+  const count = state.session.intensity === 'hard' ? randomBetween(30, 40) :
+                state.session.intensity === 'quick' ? randomBetween(10, 15) :
+                randomBetween(20, 25);
+
+  const plan = await buildSessionPlan(pool, count);
+
+  state.session.plan = plan;
+  state.session.current = 0;
+  state.session.history = [];
+  state.session.scores = [];
+  state.session.startTime = Date.now();
+
+  document.getElementById('q-total').textContent = plan.length;
+
+  hideLoading();
+  showScreen('interview');
+  startTimer();
+  await askQuestion();
+}
+
+async function buildSessionPlan(pool, count) {
+  // Simple shuffle with priority weighting
+  const weighted = [];
+  pool.forEach(q => {
+    const weight = q.priority === 'critical' ? 3 : q.priority === 'important' ? 2 : 1;
+    for (let i = 0; i < weight; i++) weighted.push(q);
+  });
+
+  const shuffled = shuffle(weighted);
+  const seen = new Set();
+  const selected = [];
+
+  for (const q of shuffled) {
+    if (!seen.has(q.id)) {
+      seen.add(q.id);
+      selected.push(q);
+      if (selected.length >= count) break;
+    }
+  }
+
+  return selected;
+}
+
+// ══════════════════════════════════════
+// QUESTION FLOW
+// ══════════════════════════════════════
+async function askQuestion() {
+  const q = state.session.plan[state.session.current];
+  if (!q) { endSession(); return; }
+
+  const num = state.session.current + 1;
+  document.getElementById('q-current').textContent = num;
+  document.getElementById('question-num').textContent = `// вопрос ${String(num).padStart(2,'0')}`;
+  document.getElementById('section-badge').textContent = q.section.replace(/_/g, ' ');
+  document.getElementById('progress-bar').style.width = `${(num / state.session.plan.length) * 100}%`;
+
+  // Ask Gemini to rephrase
+  showLoading('перефразирую вопрос...');
+  const rephrased = await rephraseQuestion(q);
+  hideLoading();
+
+  document.getElementById('question-text').textContent = rephrased;
+  document.getElementById('ai-bubble').style.display = 'none';
+  const _tb = document.getElementById('transcript-box'); _tb.textContent = 'твой ответ появится здесь...'; _tb.dataset.final = '';
+  document.getElementById('transcript-box').classList.add('empty');
+  document.getElementById('btn-send').disabled = true;
+
+  // Speak the question
+  speak(rephrased);
+
+  state.session.history.push({
+    question_id: q.id,
+    question: rephrased,
+    original: q.question,
+    section: q.section,
+    followups: [],
+    score: null
+  });
+}
+
+async function rephraseQuestion(q) {
+  const isAdvanced = state.session.level === 'advanced' || q.level === 'advanced';
+  const style = isAdvanced ?
+    'Перефразируй через практику, трейдоффы или симптом. Меняй угол подачи.' :
+    'Перефразируй минимально — измени порядок слов или формулировку, сохрани суть.';
+
+  try {
+    const res = await callGemini([{
+      role: 'user',
+      content: `Ты технический интервьюер. ${style}
+Вопрос: "${q.question}"
+Ответь ТОЛЬКО перефразированным вопросом, без пояснений. Один вопрос, одно предложение.`
+    }]);
+    return res || q.question;
+  } catch(e) {
+    return q.question;
+  }
+}
+
+async function sendAnswer() {
+  const transcript = document.getElementById('transcript-box').textContent;
+  if (!transcript || transcript === 'твой ответ появится здесь...') return;
+
+  document.getElementById('btn-send').disabled = true;
+
+  const current = state.session.history[state.session.history.length - 1];
+  current.answer = transcript;
+
+  // Show thinking
+  const bubble = document.getElementById('ai-bubble');
+  const msg = document.getElementById('ai-message');
+  bubble.style.display = 'flex';
+  msg.innerHTML = '<div class="thinking"><span></span><span></span><span></span></div>';
+
+  const q = state.session.plan[state.session.current];
+  const followupCount = current.followups.length;
+  const maxFollowups = state.session.intensity === 'hard' ? 1 : 5;
+
+  const response = await getInterviewerResponse(q, current, followupCount, maxFollowups);
+
+  msg.textContent = response.message;
+  speak(response.message);
+
+  if (response.action === 'followup') {
+    current.followups.push({ question: response.message, answer: null });
+    const _tb = document.getElementById('transcript-box'); _tb.textContent = 'твой ответ появится здесь...'; _tb.dataset.final = '';
+    document.getElementById('transcript-box').classList.add('empty');
+    document.getElementById('btn-send').disabled = true;
+  } else {
+    current.score = response.score;
+    state.session.scores.push(response.score);
+    setTimeout(() => nextQuestion(), 2000);
+  }
+}
+
+async function getInterviewerResponse(q, current, followupCount, maxFollowups) {
+  const keywords = q.keywords?.join(', ') || '';
+  const historyText = current.followups.map((f,i) =>
+    `Уточняющий ${i+1}: ${f.question}\nОтвет: ${f.answer || current.answer}`
+  ).join('\n');
+
+  const prompt = `Ты senior NLP/LLM интервьюер. Уровень кандидата: мидл+/синьор.
+
+Вопрос: "${current.question}"
+Ключевые концепции: ${keywords}
+Ответ кандидата: "${current.answer}"
+${historyText ? `История уточнений:\n${historyText}` : ''}
+Уточняющих задано: ${followupCount} из максимум ${maxFollowups}
+
+ПРАВИЛА:
+- Не принимай поверхностные ответы — копай в механику и трейдоффы
+- Если ответ хороший и полный — переходи к следующему вопросу
+- Если поверхностный — задай уточняющий вопрос (1-3 предложения)
+- НЕ давай правильный ответ, только доспрашивай
+- Говори как живой интервьюер, без формальностей
+- На русском языке
+
+Ответь в JSON:
+{
+  "action": "followup" или "next",
+  "message": "твой ответ/уточнение",
+  "score": "strong" или "weak" или "ok" (только если action=next)
+}`;
+
+  try {
+    const res = await callGemini([{ role: 'user', content: prompt }]);
+    const cleaned = res.replace(/```json|```/g, '').trim();
+    return JSON.parse(cleaned);
+  } catch(e) {
+    return { action: 'next', message: 'Понятно, двигаемся дальше.', score: 'ok' };
+  }
+}
+
+function skipQuestion() {
+  const current = state.session.history[state.session.history.length - 1];
+  if (current) current.score = 'weak';
+  state.session.scores.push('weak');
+  nextQuestion();
+}
+
+function nextQuestion() {
+  state.session.current++;
+  if (state.session.current >= state.session.plan.length) {
+    endSession();
+  } else {
+    document.getElementById('ai-bubble').style.display = 'none';
+    askQuestion();
+  }
+}
+
+// ══════════════════════════════════════
+// VOICE
+// ══════════════════════════════════════
+let recognition = null;
+let isListening = false;
+
+function toggleMic() {
+  if (isListening) {
+    stopListening();
+  } else {
+    startListening();
+  }
+}
+
+function startListening() {
+  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+    alert('Браузер не поддерживает распознавание речи. Используй Chrome.');
+    return;
+  }
+
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  recognition = new SR();
+  recognition.lang = 'ru-RU';
+  recognition.continuous = true;
+  recognition.interimResults = true;
+
+  recognition.onstart = () => {
+    isListening = true;
+    document.getElementById('mic-btn').classList.add('listening');
+    document.getElementById('waveform').classList.add('active');
+    document.getElementById('voice-status').textContent = 'слушаю...';
+  };
+
+  recognition.onresult = (e) => {
+    let final = '';
+    let interim = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      if (e.results[i].isFinal) final += e.results[i][0].transcript + ' ';
+      else interim += e.results[i][0].transcript;
+    }
+    const box = document.getElementById('transcript-box');
+    const prev = box.classList.contains('empty') ? '' : box.dataset.final || '';
+    if (final) {
+      box.dataset.final = (prev + ' ' + final).trim();
+    }
+    const display = ((box.dataset.final || '') + ' ' + interim).trim();
+    if (display) {
+      box.textContent = display;
+      box.classList.remove('empty');
+      document.getElementById('btn-send').disabled = false;
+    }
+  };
+
+  recognition.onerror = (e) => {
+    if (e.error === 'aborted' || e.error === 'no-speech') return;
+    stopListening();
+  };
+
+  recognition.onend = () => {
+    if (isListening) {
+      // перезапускаем автоматически пока пользователь не остановил сам
+      setTimeout(() => {
+        if (isListening) {
+          try { recognition.start(); } catch(err) {}
+        }
+      }, 100);
+    }
+  };
+
+  recognition.start();
+}
+
+function stopListening() {
+  isListening = false;
+  recognition?.stop();
+  document.getElementById('mic-btn').classList.remove('listening');
+  document.getElementById('waveform').classList.remove('active');
+  document.getElementById('voice-status').textContent = 'нажми для ответа';
+}
+
+function speak(text) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.lang = 'ru-RU';
+  utt.rate = 0.95;
+  const voices = window.speechSynthesis.getVoices();
+  const ruVoice = voices.find(v => v.lang === 'ru-RU');
+  if (ruVoice) utt.voice = ruVoice;
+  window.speechSynthesis.speak(utt);
+}
+
+// ══════════════════════════════════════
+// END SESSION
+// ══════════════════════════════════════
+async function endSession() {
+  stopTimer();
+  stopListening();
+  window.speechSynthesis?.cancel();
+
+  showScreen('results');
+
+  const scores = state.session.scores;
+  const strong = scores.filter(s => s === 'strong').length;
+  const weak = scores.filter(s => s === 'weak').length;
+  const total = state.session.history.length;
+
+  document.getElementById('stat-total').textContent = total;
+  document.getElementById('stat-strong').textContent = strong;
+  document.getElementById('stat-weak').textContent = weak;
+
+  const elapsed = Math.floor((Date.now() - state.session.startTime) / 60000);
+  const topics = [...state.session.topics].join(', ');
+  document.getElementById('results-meta').textContent =
+    `${topics} · ${state.session.level} · ${elapsed} мин`;
+
+  showLoading('генерирую фидбек...');
+  const feedback = await generateFeedback();
+  hideLoading();
+
+  document.getElementById('feedback-text').textContent = feedback.summary;
+
+  const chipsEl = document.getElementById('weak-chips');
+  chipsEl.innerHTML = '';
+  feedback.weak_topics.forEach(t => {
+    const chip = document.createElement('div');
+    chip.className = 'weak-chip red';
+    chip.textContent = t;
+    chipsEl.appendChild(chip);
+  });
+  feedback.ok_topics.forEach(t => {
+    const chip = document.createElement('div');
+    chip.className = 'weak-chip amber';
+    chip.textContent = t;
+    chipsEl.appendChild(chip);
+  });
+
+  saveToStorage(feedback);
+}
+
+async function generateFeedback() {
+  const weakQuestions = state.session.history
+    .filter(h => h.score === 'weak')
+    .map(h => h.original);
+
+  const prompt = `Ты senior NLP/LLM интервьюер. Дай финальный фидбек по собесу.
+
+Всего вопросов: ${state.session.history.length}
+Сильных ответов: ${state.session.scores.filter(s=>s==='strong').length}
+Слабых/пропущенных: ${state.session.scores.filter(s=>s==='weak').length}
+Слабые вопросы: ${weakQuestions.join('; ')}
+
+Ответь в JSON:
+{
+  "summary": "2-3 предложения общего фидбека",
+  "weak_topics": ["тема1", "тема2"],
+  "ok_topics": ["тема3"]
+}`;
+
+  try {
+    const res = await callGemini([{ role: 'user', content: prompt }]);
+    const cleaned = res.replace(/```json|```/g, '').trim();
+    return JSON.parse(cleaned);
+  } catch(e) {
+    return {
+      summary: 'Сессия завершена. Проработай слабые темы.',
+      weak_topics: weakQuestions.slice(0,5).map(q => q.substring(0,40)),
+      ok_topics: []
+    };
+  }
+}
+
+function downloadFeedback() {
+  const weak = state.session.history.filter(h => h.score === 'weak');
+  const date = new Date().toISOString().split('T')[0];
+
+  let md = `# Фидбек собеса ${date}\n\n`;
+  md += `**Вопросов:** ${state.session.history.length}  \n`;
+  md += `**Сильных:** ${state.session.scores.filter(s=>s==='strong').length}  \n`;
+  md += `**Слабых:** ${state.session.scores.filter(s=>s==='weak').length}\n\n`;
+  md += `## Проработать\n\n`;
+  weak.forEach(h => { md += `- ${h.original}\n`; });
+
+  const blob = new Blob([md], { type: 'text/markdown' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `interview_${date}.md`;
+  a.click();
+}
+
+// ══════════════════════════════════════
+// GEMINI API
+// ══════════════════════════════════════
+async function callGemini(messages) {
+  const apiKey = typeof CONFIG !== 'undefined' ? CONFIG.GEMINI_API_KEY : '';
+  if (!apiKey) { console.warn('No API key'); return ''; }
+
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: messages.map(m => ({
+          role: m.role === 'user' ? 'user' : 'model',
+          parts: [{ text: m.content }]
+        }))
+      })
+    }
+  );
+
+  const data = await res.json();
+  return data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+}
+
+// ══════════════════════════════════════
+// TIMER
+// ══════════════════════════════════════
+function startTimer() {
+  state.session.timerInterval = setInterval(() => {
+    const elapsed = Math.floor((Date.now() - state.session.startTime) / 1000);
+    const m = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const s = String(elapsed % 60).padStart(2, '0');
+    document.getElementById('session-timer').textContent = `${m}:${s}`;
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(state.session.timerInterval);
+}
+
+// ══════════════════════════════════════
+// STORAGE
+// ══════════════════════════════════════
+function saveToStorage(feedback) {
+  try {
+    const sessions = JSON.parse(localStorage.getItem('ml_interview_sessions') || '[]');
+    sessions.unshift({
+      date: new Date().toISOString(),
+      total: state.session.history.length,
+      strong: state.session.scores.filter(s=>s==='strong').length,
+      weak: state.session.scores.filter(s=>s==='weak').length,
+      topics: [...state.session.topics],
+      feedback: feedback.summary
+    });
+    localStorage.setItem('ml_interview_sessions', JSON.stringify(sessions.slice(0, 50)));
+  } catch(e) {}
+}
+
+// ══════════════════════════════════════
+// UTILS
+// ══════════════════════════════════════
+function showScreen(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(`screen-${name}`).classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+function showSetup() { showScreen('setup'); }
+
+function showLoading(text) {
+  document.getElementById('loading-text').textContent = text;
+  document.getElementById('loading').classList.add('active');
+}
+
+function hideLoading() {
+  document.getElementById('loading').classList.remove('active');
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function randomBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Load voices for speech synthesis
+window.speechSynthesis?.getVoices();
+window.speechSynthesis?.addEventListener('voiceschanged', () => {});
+
+init();
+</script>
+</body>
+</html>
