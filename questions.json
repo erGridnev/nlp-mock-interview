@@ -1,0 +1,4508 @@
+{
+  "questions": [
+    {
+      "id": "data_types_001",
+      "category": "python",
+      "section": "data_types",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "data_types",
+      "question": "Изменяемые и неизменяемые типы данных: в чём разница и что произойдёт с B, если B = A и затем A += 1",
+      "keywords": []
+    },
+    {
+      "id": "data_types_002",
+      "category": "python",
+      "section": "data_types",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "data_types",
+      "question": "Как работает словарь: хэш-таблица, сложности операций, разрешение коллизий",
+      "keywords": []
+    },
+    {
+      "id": "data_types_003",
+      "category": "python",
+      "section": "data_types",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "data_types",
+      "question": "Как устроен set, чем он отличается от dict и каковы сложности операций",
+      "keywords": []
+    },
+    {
+      "id": "data_types_004",
+      "category": "python",
+      "section": "data_types",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "data_types",
+      "question": "Как устроен список: динамический массив, сложности операций, вставка и удаление в разных частях",
+      "keywords": []
+    },
+    {
+      "id": "data_types_005",
+      "category": "python",
+      "section": "data_types",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "data_types",
+      "question": "Можно ли изменить список внутри tuple",
+      "keywords": []
+    },
+    {
+      "id": "data_types_006",
+      "category": "python",
+      "section": "data_types",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "data_types",
+      "question": "Почему список внутри функции может не изменять оригинал и что произойдёт со символом строки по индексу",
+      "keywords": []
+    },
+    {
+      "id": "data_types_007",
+      "category": "python",
+      "section": "data_types",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "data_types",
+      "question": "copy vs deepcopy: в чём разница и когда что использовать",
+      "keywords": []
+    },
+    {
+      "id": "functions_iterators_001",
+      "category": "python",
+      "section": "functions_iterators",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "functions_iterators",
+      "question": "Что такое *args и **kwargs и когда их использовать",
+      "keywords": []
+    },
+    {
+      "id": "functions_iterators_002",
+      "category": "python",
+      "section": "functions_iterators",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "functions_iterators",
+      "question": "Что такое менеджер контекста, как работают __enter__ и __exit__, примеры использования",
+      "keywords": []
+    },
+    {
+      "id": "functions_iterators_003",
+      "category": "python",
+      "section": "functions_iterators",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "functions_iterators",
+      "question": "Итерируемые объекты, итераторы и генераторы: чем отличаются",
+      "keywords": []
+    },
+    {
+      "id": "functions_iterators_004",
+      "category": "python",
+      "section": "functions_iterators",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "functions_iterators",
+      "question": "Как работают декораторы и где они полезны",
+      "keywords": []
+    },
+    {
+      "id": "functions_iterators_005",
+      "category": "python",
+      "section": "functions_iterators",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "functions_iterators",
+      "question": "Что такое lambda-функции и чем они отличаются от обычных функций",
+      "keywords": []
+    },
+    {
+      "id": "functions_iterators_006",
+      "category": "python",
+      "section": "functions_iterators",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "functions_iterators",
+      "question": "Как работает сборщик мусора в Python: reference counting, циклические ссылки, поколения",
+      "keywords": []
+    },
+    {
+      "id": "functions_iterators_007",
+      "category": "python",
+      "section": "functions_iterators",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "functions_iterators",
+      "question": "List / dict / set comprehensions: как работают и когда уместны",
+      "keywords": []
+    },
+    {
+      "id": "functions_iterators_008",
+      "category": "python",
+      "section": "functions_iterators",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "functions_iterators",
+      "question": "Type hints: зачем нужны и что дают в реальной разработке",
+      "keywords": []
+    },
+    {
+      "id": "oop_001",
+      "category": "python",
+      "section": "oop",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "oop",
+      "question": "Что такое магические методы, какие бывают примеры и чем __str__ отличается от __repr__",
+      "keywords": []
+    },
+    {
+      "id": "oop_002",
+      "category": "python",
+      "section": "oop",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "oop",
+      "question": "Как работают __init__, self и cls",
+      "keywords": []
+    },
+    {
+      "id": "oop_003",
+      "category": "python",
+      "section": "oop",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "oop",
+      "question": "Что такое super() и MRO",
+      "keywords": []
+    },
+    {
+      "id": "oop_004",
+      "category": "python",
+      "section": "oop",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "oop",
+      "question": "Чем отличаются @classmethod и @staticmethod",
+      "keywords": []
+    },
+    {
+      "id": "oop_005",
+      "category": "python",
+      "section": "oop",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "oop",
+      "question": "Что такое полиморфизм в Python",
+      "keywords": []
+    },
+    {
+      "id": "oop_006",
+      "category": "python",
+      "section": "oop",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "oop",
+      "question": "Что такое инкапсуляция: public, protected и private атрибуты",
+      "keywords": []
+    },
+    {
+      "id": "oop_007",
+      "category": "python",
+      "section": "oop",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "oop",
+      "question": "Что делает @property и когда его использовать",
+      "keywords": []
+    },
+    {
+      "id": "oop_008",
+      "category": "python",
+      "section": "oop",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "oop",
+      "question": "Что такое наследование и какие плюсы и минусы у него есть",
+      "keywords": []
+    },
+    {
+      "id": "async_parallel_001",
+      "category": "python",
+      "section": "async_parallel",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "async_parallel",
+      "question": "Чем отличаются потоки и процессы, а также threading vs multiprocessing",
+      "keywords": []
+    },
+    {
+      "id": "async_parallel_002",
+      "category": "python",
+      "section": "async_parallel",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "async_parallel",
+      "question": "Что такое GIL и как он влияет на многопоточность",
+      "keywords": []
+    },
+    {
+      "id": "async_parallel_003",
+      "category": "python",
+      "section": "async_parallel",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "async_parallel",
+      "question": "Как процессы обмениваются данными и какие есть ограничения при передаче данных в multiprocessing",
+      "keywords": []
+    },
+    {
+      "id": "async_parallel_004",
+      "category": "python",
+      "section": "async_parallel",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "async_parallel",
+      "question": "Что такое async / await, event loop и asyncio",
+      "keywords": []
+    },
+    {
+      "id": "async_parallel_005",
+      "category": "python",
+      "section": "async_parallel",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "async_parallel",
+      "question": "Чем asyncio отличается от threading и multiprocessing и когда что использовать",
+      "keywords": []
+    },
+    {
+      "id": "async_parallel_006",
+      "category": "python",
+      "section": "async_parallel",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "async_parallel",
+      "question": "Что такое Pydantic и зачем он нужен в AI / LLM backend: схемы данных, валидация и structured outputs",
+      "keywords": []
+    },
+    {
+      "id": "async_parallel_007",
+      "category": "python",
+      "section": "async_parallel",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "async_parallel",
+      "question": "Как FastAPI и async endpoint-обработчики помогают при inference-serving и где async не устраняет CPU-bound или GPU-bound bottleneck",
+      "keywords": []
+    },
+    {
+      "id": "async_parallel_008",
+      "category": "python",
+      "section": "async_parallel",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "async_parallel",
+      "question": "Когда async полезен вокруг LLM-запроса: I/O, сетевые вызовы, базы, tool calls — и почему он не ускоряет саму генерацию модели",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_001",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Как работает метод линейной регрессии",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_002",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Преимущества линейной регрессии",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_003",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Какая функция потерь используется в линейной регрессии и в чём её преимущества",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_004",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Почему функция потерь в линейной регрессии должна быть выпуклой",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_005",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Как линейная регрессия обучается: 2 способа нахождения коэффициентов",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_006",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Недостатки линейной регрессии как метода",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_007",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Какие метрики используются для оценки качества линейной регрессии: MAE, MSE/RMSE, MAPE, R²",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_008",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Зачем масштабировать признаки перед линейной регрессией",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_009",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Как обрабатывать категориальные признаки",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_010",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Что такое мультиколлинеарность и почему это плохо",
+      "keywords": []
+    },
+    {
+      "id": "linear_regression_011",
+      "category": "ml",
+      "section": "linear_regression",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "linear_regression",
+      "question": "Понятие метрика и Loss: в чём разница",
+      "keywords": []
+    },
+    {
+      "id": "regularization_001",
+      "category": "ml",
+      "section": "regularization",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "regularization",
+      "question": "Что такое регуляризация и зачем нужна",
+      "keywords": []
+    },
+    {
+      "id": "regularization_002",
+      "category": "ml",
+      "section": "regularization",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "regularization",
+      "question": "Как регуляризация помогает бороться с переобучением",
+      "keywords": []
+    },
+    {
+      "id": "regularization_003",
+      "category": "ml",
+      "section": "regularization",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "regularization",
+      "question": "Виды регуляризации: L1, L2, Elastic Net — отличия",
+      "keywords": []
+    },
+    {
+      "id": "regularization_004",
+      "category": "ml",
+      "section": "regularization",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "regularization",
+      "question": "Почему L1 зануляет веса, а L2 нет",
+      "keywords": []
+    },
+    {
+      "id": "regularization_005",
+      "category": "ml",
+      "section": "regularization",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "regularization",
+      "question": "Как выбрать между L1 и L2",
+      "keywords": []
+    },
+    {
+      "id": "regularization_006",
+      "category": "ml",
+      "section": "regularization",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "regularization",
+      "question": "Как влияет увеличение/уменьшение λ на поведение модели",
+      "keywords": []
+    },
+    {
+      "id": "overfitting_001",
+      "category": "ml",
+      "section": "overfitting",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "overfitting",
+      "question": "Что такое переобучение, как обнаружить и как бороться",
+      "keywords": [
+        "bias-variance",
+        "regularization",
+        "dropout",
+        "early stopping"
+      ]
+    },
+    {
+      "id": "overfitting_002",
+      "category": "ml",
+      "section": "overfitting",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "overfitting",
+      "question": "Что такое bias-variance tradeoff",
+      "keywords": [
+        "bias-variance",
+        "regularization",
+        "dropout",
+        "early stopping"
+      ]
+    },
+    {
+      "id": "classification_metrics_001",
+      "category": "ml",
+      "section": "classification_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "classification_metrics",
+      "question": "Confusion matrix: Accuracy, Precision, Recall, F1",
+      "keywords": [
+        "precision",
+        "recall",
+        "F1",
+        "ROC-AUC",
+        "PR-AUC"
+      ]
+    },
+    {
+      "id": "classification_metrics_002",
+      "category": "ml",
+      "section": "classification_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "classification_metrics",
+      "question": "F-beta score и почему используется гармоническое среднее",
+      "keywords": [
+        "precision",
+        "recall",
+        "F1",
+        "ROC-AUC",
+        "PR-AUC"
+      ]
+    },
+    {
+      "id": "classification_metrics_003",
+      "category": "ml",
+      "section": "classification_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "classification_metrics",
+      "question": "Микро-, макро- и weighted-усреднение",
+      "keywords": [
+        "precision",
+        "recall",
+        "F1",
+        "ROC-AUC",
+        "PR-AUC"
+      ]
+    },
+    {
+      "id": "classification_metrics_004",
+      "category": "ml",
+      "section": "classification_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "classification_metrics",
+      "question": "ROC-AUC: как строится, что измеряет, проблемы",
+      "keywords": [
+        "precision",
+        "recall",
+        "F1",
+        "ROC-AUC",
+        "PR-AUC"
+      ]
+    },
+    {
+      "id": "classification_metrics_005",
+      "category": "ml",
+      "section": "classification_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "classification_metrics",
+      "question": "PR-AUC: что это, отличия от ROC-AUC, когда что использовать",
+      "keywords": [
+        "precision",
+        "recall",
+        "F1",
+        "ROC-AUC",
+        "PR-AUC"
+      ]
+    },
+    {
+      "id": "classification_metrics_006",
+      "category": "ml",
+      "section": "classification_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "classification_metrics",
+      "question": "Изменится ли PR-AUC если дублировать объекты выборки и почему",
+      "keywords": [
+        "precision",
+        "recall",
+        "F1",
+        "ROC-AUC",
+        "PR-AUC"
+      ]
+    },
+    {
+      "id": "classification_metrics_007",
+      "category": "ml",
+      "section": "classification_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "classification_metrics",
+      "question": "Что произойдёт с ROC-AUC если дублировать каждый объект положительного класса 7 раз, а отрицательного 4 раза",
+      "keywords": [
+        "precision",
+        "recall",
+        "F1",
+        "ROC-AUC",
+        "PR-AUC"
+      ]
+    },
+    {
+      "id": "logistic_regression_001",
+      "category": "ml",
+      "section": "logistic_regression",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "logistic_regression",
+      "question": "Как работает логистическая регрессия: сигмоида, функция потерь, как принимает решение",
+      "keywords": []
+    },
+    {
+      "id": "logistic_regression_002",
+      "category": "ml",
+      "section": "logistic_regression",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "logistic_regression",
+      "question": "Чем логистическая регрессия отличается от линейной",
+      "keywords": []
+    },
+    {
+      "id": "logistic_regression_003",
+      "category": "ml",
+      "section": "logistic_regression",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "logistic_regression",
+      "question": "Что оптимизирует логистическая регрессия, почему не MSE",
+      "keywords": []
+    },
+    {
+      "id": "logistic_regression_004",
+      "category": "ml",
+      "section": "logistic_regression",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "logistic_regression",
+      "question": "Как интерпретировать коэффициенты логистической регрессии",
+      "keywords": []
+    },
+    {
+      "id": "logistic_regression_005",
+      "category": "ml",
+      "section": "logistic_regression",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "logistic_regression",
+      "question": "Ограничения и допущения логистической регрессии",
+      "keywords": []
+    },
+    {
+      "id": "gradient_descent_001",
+      "category": "ml",
+      "section": "gradient_descent",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "gradient_descent",
+      "question": "Как работает градиентный спуск: виды batch, SGD, mini-batch",
+      "keywords": []
+    },
+    {
+      "id": "decision_trees_001",
+      "category": "ml",
+      "section": "decision_trees",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "decision_trees",
+      "question": "Как работают деревья решений: критерии разбиения, Джини, энтропия, Information Gain",
+      "keywords": []
+    },
+    {
+      "id": "decision_trees_002",
+      "category": "ml",
+      "section": "decision_trees",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "decision_trees",
+      "question": "Как дерево работает с непрерывными и категориальными признаками",
+      "keywords": []
+    },
+    {
+      "id": "decision_trees_003",
+      "category": "ml",
+      "section": "decision_trees",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "decision_trees",
+      "question": "Гиперпараметры и критерии остановки",
+      "keywords": []
+    },
+    {
+      "id": "decision_trees_004",
+      "category": "ml",
+      "section": "decision_trees",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "decision_trees",
+      "question": "Склонны ли деревья к переобучению и как с этим бороться",
+      "keywords": []
+    },
+    {
+      "id": "decision_trees_005",
+      "category": "ml",
+      "section": "decision_trees",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "decision_trees",
+      "question": "Почему деревья решений не умеют экстраполировать",
+      "keywords": []
+    },
+    {
+      "id": "decision_trees_006",
+      "category": "ml",
+      "section": "decision_trees",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "decision_trees",
+      "question": "Важно ли масштабировать признаки для деревьев решений",
+      "keywords": []
+    },
+    {
+      "id": "decision_trees_007",
+      "category": "ml",
+      "section": "decision_trees",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "decision_trees",
+      "question": "Когда решающее дерево не может дать 100% качество на обучающей выборке даже без ограничений на глубину",
+      "keywords": []
+    },
+    {
+      "id": "random_forest_001",
+      "category": "ml",
+      "section": "random_forest",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "random_forest",
+      "question": "Как работает случайный лес: bootstrap, случайный выбор признаков, итоговый прогноз",
+      "keywords": []
+    },
+    {
+      "id": "random_forest_002",
+      "category": "ml",
+      "section": "random_forest",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "random_forest",
+      "question": "Основные виды ансамблей: bagging, boosting, stacking",
+      "keywords": []
+    },
+    {
+      "id": "random_forest_003",
+      "category": "ml",
+      "section": "random_forest",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "random_forest",
+      "question": "Устойчив ли случайный лес к шуму и выбросам",
+      "keywords": []
+    },
+    {
+      "id": "random_forest_004",
+      "category": "ml",
+      "section": "random_forest",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "random_forest",
+      "question": "Что такое OOB-ошибка",
+      "keywords": []
+    },
+    {
+      "id": "random_forest_005",
+      "category": "ml",
+      "section": "random_forest",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "random_forest",
+      "question": "Как оценивается важность признаков",
+      "keywords": []
+    },
+    {
+      "id": "gradient_boosting_001",
+      "category": "ml",
+      "section": "gradient_boosting",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "gradient_boosting",
+      "question": "Как работает градиентный бустинг: идея, алгоритм, предсказание",
+      "keywords": []
+    },
+    {
+      "id": "gradient_boosting_002",
+      "category": "ml",
+      "section": "gradient_boosting",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "gradient_boosting",
+      "question": "Чем градиентный бустинг отличается от случайного леса",
+      "keywords": []
+    },
+    {
+      "id": "gradient_boosting_003",
+      "category": "ml",
+      "section": "gradient_boosting",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "gradient_boosting",
+      "question": "Какие деревья выгоднее для бустинга: глубокие или неглубокие",
+      "keywords": []
+    },
+    {
+      "id": "gradient_boosting_004",
+      "category": "ml",
+      "section": "gradient_boosting",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "gradient_boosting",
+      "question": "Ключевые гиперпараметры градиентного бустинга",
+      "keywords": []
+    },
+    {
+      "id": "gradient_boosting_005",
+      "category": "ml",
+      "section": "gradient_boosting",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "gradient_boosting",
+      "question": "Переобучение в бустинге: причины, как бороться, early stopping",
+      "keywords": []
+    },
+    {
+      "id": "gradient_boosting_006",
+      "category": "ml",
+      "section": "gradient_boosting",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "gradient_boosting",
+      "question": "Сильные и слабые стороны градиентного бустинга",
+      "keywords": []
+    },
+    {
+      "id": "gradient_boosting_007",
+      "category": "ml",
+      "section": "gradient_boosting",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "gradient_boosting",
+      "question": "Почему бустинг чувствителен к выбросам и как это исправить",
+      "keywords": []
+    },
+    {
+      "id": "normalization_001",
+      "category": "dl",
+      "section": "normalization",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "normalization",
+      "question": "Что такое Batch Normalization: как работает, обучаемые параметры, обучение vs инференс",
+      "keywords": [
+        "BatchNorm",
+        "LayerNorm",
+        "gamma",
+        "beta",
+        "train vs inference"
+      ]
+    },
+    {
+      "id": "normalization_002",
+      "category": "dl",
+      "section": "normalization",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "normalization",
+      "question": "Что такое Layer Normalization: как работает, почему в LLM используют LayerNorm а не BatchNorm",
+      "keywords": [
+        "BatchNorm",
+        "LayerNorm",
+        "gamma",
+        "beta",
+        "train vs inference"
+      ]
+    },
+    {
+      "id": "regularization_stability_001",
+      "category": "dl",
+      "section": "regularization_stability",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "regularization_stability",
+      "question": "Что такое Dropout: обучение vs инференс, inverted dropout",
+      "keywords": []
+    },
+    {
+      "id": "regularization_stability_002",
+      "category": "dl",
+      "section": "regularization_stability",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "regularization_stability",
+      "question": "Что такое Gradient Clipping: зачем нужен, как работает",
+      "keywords": []
+    },
+    {
+      "id": "regularization_stability_003",
+      "category": "dl",
+      "section": "regularization_stability",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "regularization_stability",
+      "question": "Что такое Gradient Checkpointing: зачем нужен, как работает",
+      "keywords": []
+    },
+    {
+      "id": "regularization_stability_004",
+      "category": "dl",
+      "section": "regularization_stability",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "regularization_stability",
+      "question": "Vanishing / Exploding Gradients: что это, почему возникает, как бороться",
+      "keywords": []
+    },
+    {
+      "id": "optimizers_001",
+      "category": "dl",
+      "section": "optimizers",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "optimizers",
+      "question": "Как работает Adam: моменты, bias correction",
+      "keywords": [
+        "Adam",
+        "AdamW",
+        "momentum",
+        "weight decay",
+        "bias correction"
+      ]
+    },
+    {
+      "id": "optimizers_002",
+      "category": "dl",
+      "section": "optimizers",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "optimizers",
+      "question": "Как работает AdamW: отличие от Adam, weight decay",
+      "keywords": [
+        "Adam",
+        "AdamW",
+        "momentum",
+        "weight decay",
+        "bias correction"
+      ]
+    },
+    {
+      "id": "activations_001",
+      "category": "dl",
+      "section": "activations",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "activations",
+      "question": "Что такое функции активации и зачем они нужны",
+      "keywords": []
+    },
+    {
+      "id": "activations_002",
+      "category": "dl",
+      "section": "activations",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "activations",
+      "question": "ReLU, Tanh, Sigmoid: как работают, плюсы и минусы",
+      "keywords": []
+    },
+    {
+      "id": "activations_003",
+      "category": "dl",
+      "section": "activations",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "activations",
+      "question": "GELU, SiLU, SwiGLU: почему они популярны в LLM",
+      "keywords": []
+    },
+    {
+      "id": "training_001",
+      "category": "dl",
+      "section": "training",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "training",
+      "question": "Что такое backpropagation: chain rule, пример",
+      "keywords": []
+    },
+    {
+      "id": "training_002",
+      "category": "dl",
+      "section": "training",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "training",
+      "question": "Learning Rate Scheduler + Warmup: виды, связка для LLM",
+      "keywords": []
+    },
+    {
+      "id": "training_003",
+      "category": "dl",
+      "section": "training",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "training",
+      "question": "Переобучение нейросети: специфика deep learning, как обнаружить, как бороться",
+      "keywords": []
+    },
+    {
+      "id": "training_004",
+      "category": "dl",
+      "section": "training",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "training",
+      "question": "Инициализация весов: Xavier, He, Scaled Normal для LLM",
+      "keywords": []
+    },
+    {
+      "id": "training_005",
+      "category": "dl",
+      "section": "training",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "training",
+      "question": "Глубина модели и её влияние на обучение",
+      "keywords": []
+    },
+    {
+      "id": "training_006",
+      "category": "dl",
+      "section": "training",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "training",
+      "question": "Что такое эпоха, батч, итерация",
+      "keywords": []
+    },
+    {
+      "id": "training_007",
+      "category": "dl",
+      "section": "training",
+      "level": "base",
+      "priority": "important",
+      "depth": "deep",
+      "topic_cluster": "training",
+      "question": "Mixed Precision: FP16 / BF16, зачем нужно, почему BF16 часто используют в LLM",
+      "keywords": []
+    },
+    {
+      "id": "pytorch_001",
+      "category": "dl",
+      "section": "pytorch",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "pytorch",
+      "question": "Шаги обучения в PyTorch и роль torch.no_grad(): полный пайплайн",
+      "keywords": []
+    },
+    {
+      "id": "classic_nlp_001",
+      "category": "nlp_llm",
+      "section": "classic_nlp",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "classic_nlp",
+      "question": "Что такое Bag of Words и какие у него ограничения",
+      "keywords": []
+    },
+    {
+      "id": "classic_nlp_002",
+      "category": "nlp_llm",
+      "section": "classic_nlp",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "classic_nlp",
+      "question": "Что такое TF-IDF, как вычисляется и чем лучше BoW",
+      "keywords": []
+    },
+    {
+      "id": "classic_nlp_003",
+      "category": "nlp_llm",
+      "section": "classic_nlp",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "classic_nlp",
+      "question": "Архитектуры Word2Vec: CBOW vs Skip-gram, как формируется обучающая задача, Negative Sampling",
+      "keywords": []
+    },
+    {
+      "id": "classic_nlp_004",
+      "category": "nlp_llm",
+      "section": "classic_nlp",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "classic_nlp",
+      "question": "Почему Word2Vec не захватывает контекст",
+      "keywords": []
+    },
+    {
+      "id": "classic_nlp_005",
+      "category": "nlp_llm",
+      "section": "classic_nlp",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "classic_nlp",
+      "question": "Чем GloVe отличается от Word2Vec",
+      "keywords": []
+    },
+    {
+      "id": "classic_nlp_006",
+      "category": "nlp_llm",
+      "section": "classic_nlp",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "classic_nlp",
+      "question": "Что такое FastText",
+      "keywords": []
+    },
+    {
+      "id": "classic_nlp_007",
+      "category": "nlp_llm",
+      "section": "classic_nlp",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "classic_nlp",
+      "question": "Что такое RNN, чем отличается от FFN и какие есть проблемы при обучении",
+      "keywords": []
+    },
+    {
+      "id": "classic_nlp_008",
+      "category": "nlp_llm",
+      "section": "classic_nlp",
+      "level": "base",
+      "priority": "background",
+      "depth": "shallow",
+      "topic_cluster": "classic_nlp",
+      "question": "Что такое LSTM и как он решает проблему затухающих градиентов",
+      "keywords": []
+    },
+    {
+      "id": "attention_001",
+      "category": "nlp_llm",
+      "section": "attention",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "attention",
+      "question": "Что такое self-attention, как работает и зачем нужны Q / K / V",
+      "keywords": [
+        "Q",
+        "K",
+        "V",
+        "softmax",
+        "scaled dot-product"
+      ]
+    },
+    {
+      "id": "attention_002",
+      "category": "nlp_llm",
+      "section": "attention",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "attention",
+      "question": "Формула self-attention и зачем делим на корень из d_k",
+      "keywords": [
+        "Q",
+        "K",
+        "V",
+        "softmax",
+        "scaled dot-product"
+      ]
+    },
+    {
+      "id": "attention_003",
+      "category": "nlp_llm",
+      "section": "attention",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "attention",
+      "question": "Что такое Multi-Head Attention и зачем он нужен",
+      "keywords": [
+        "Q",
+        "K",
+        "V",
+        "softmax",
+        "scaled dot-product"
+      ]
+    },
+    {
+      "id": "attention_004",
+      "category": "nlp_llm",
+      "section": "attention",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "attention",
+      "question": "Чем self-attention отличается от cross-attention",
+      "keywords": [
+        "Q",
+        "K",
+        "V",
+        "softmax",
+        "scaled dot-product"
+      ]
+    },
+    {
+      "id": "attention_005",
+      "category": "nlp_llm",
+      "section": "attention",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "attention",
+      "question": "Что такое causal (masked) attention и зачем он нужен",
+      "keywords": [
+        "Q",
+        "K",
+        "V",
+        "softmax",
+        "scaled dot-product"
+      ]
+    },
+    {
+      "id": "attention_006",
+      "category": "nlp_llm",
+      "section": "attention",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "attention",
+      "question": "Проблемы масштабирования self-attention на длинные последовательности и модификации для ускорения: Flash Attention, Sparse Attention, Performer, Linformer",
+      "keywords": [
+        "Q",
+        "K",
+        "V",
+        "softmax",
+        "scaled dot-product"
+      ]
+    },
+    {
+      "id": "attention_007",
+      "category": "nlp_llm",
+      "section": "attention",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "attention",
+      "question": "Что такое MQA и GQA",
+      "keywords": [
+        "Q",
+        "K",
+        "V",
+        "softmax",
+        "scaled dot-product"
+      ]
+    },
+    {
+      "id": "transformer_001",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Как устроена encoder-decoder архитектура трансформера",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_002",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Различия между encoder-only, decoder-only и encoder-decoder, а также чем отличается их обучение: MLM vs CLM",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_003",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Зачем нужны residual connections",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_004",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Что делает FFN в трансформере и зачем нужна нелинейность",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_005",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Как работает позиционное кодирование и зачем оно нужно: виды (sinusoidal, learnable, RoPE, RPE)",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_006",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Почему абсолютные positional embeddings хуже масштабируются",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_007",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Какие positional embeddings используются в LLaMA, BERT, T5, GPT",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_008",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Что такое YaRN и в чём его идея для расширения контекста",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_009",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Что такое высокие и низкие частоты в контексте RoPE и как YaRN их использует",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_010",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Зачем обучать батчами, почему тексты выравниваются по длине и что такое attention mask",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_011",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Что такое Mixture of Experts (MoE): как устроена, как обучается, как работает routing",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_012",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Как избежать дисбаланса экспертов в MoE",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "transformer_013",
+      "category": "nlp_llm",
+      "section": "transformer",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "transformer",
+      "question": "Какие модели используют MoE и зачем",
+      "keywords": [
+        "encoder",
+        "decoder",
+        "residual",
+        "FFN",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "llm_inference_001",
+      "category": "nlp_llm",
+      "section": "llm_inference",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_inference",
+      "question": "Стратегии декодирования: Greedy, Beam Search, Sampling (top-k, top-p), что такое Temperature",
+      "keywords": [
+        "KV cache",
+        "pre-fill",
+        "decoding",
+        "temperature",
+        "beam search"
+      ]
+    },
+    {
+      "id": "llm_inference_002",
+      "category": "nlp_llm",
+      "section": "llm_inference",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_inference",
+      "question": "Как работает Beam Search",
+      "keywords": [
+        "KV cache",
+        "pre-fill",
+        "decoding",
+        "temperature",
+        "beam search"
+      ]
+    },
+    {
+      "id": "llm_inference_003",
+      "category": "nlp_llm",
+      "section": "llm_inference",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_inference",
+      "question": "Что такое KV Cache, а также Pre-fill и Decoding stages",
+      "keywords": [
+        "KV cache",
+        "pre-fill",
+        "decoding",
+        "temperature",
+        "beam search"
+      ]
+    },
+    {
+      "id": "quality_metrics_001",
+      "category": "nlp_llm",
+      "section": "quality_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "quality_metrics",
+      "question": "Обзор метрик для оценки генерации: BLEU, ROUGE, BERTScore, Perplexity, Human Evaluation",
+      "keywords": []
+    },
+    {
+      "id": "quality_metrics_002",
+      "category": "nlp_llm",
+      "section": "quality_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "quality_metrics",
+      "question": "BLEU: как работает, плюсы и минусы",
+      "keywords": []
+    },
+    {
+      "id": "quality_metrics_003",
+      "category": "nlp_llm",
+      "section": "quality_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "quality_metrics",
+      "question": "ROUGE: как работает, плюсы и минусы",
+      "keywords": []
+    },
+    {
+      "id": "quality_metrics_004",
+      "category": "nlp_llm",
+      "section": "quality_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "quality_metrics",
+      "question": "BERTScore: как работает, проблемы",
+      "keywords": []
+    },
+    {
+      "id": "quality_metrics_005",
+      "category": "nlp_llm",
+      "section": "quality_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "quality_metrics",
+      "question": "Perplexity: что измеряет, формула, интерпретация",
+      "keywords": []
+    },
+    {
+      "id": "quality_metrics_006",
+      "category": "nlp_llm",
+      "section": "quality_metrics",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "quality_metrics",
+      "question": "LLM-as-a-Judge: что это, плюсы и минусы",
+      "keywords": []
+    },
+    {
+      "id": "fine_tuning_001",
+      "category": "nlp_llm",
+      "section": "fine_tuning",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "fine_tuning",
+      "question": "Что такое BPE и как работает токенизация: BPE, WordPiece, SentencePiece",
+      "keywords": [
+        "LoRA",
+        "QLoRA",
+        "SFT",
+        "catastrophic forgetting",
+        "rank"
+      ]
+    },
+    {
+      "id": "fine_tuning_002",
+      "category": "nlp_llm",
+      "section": "fine_tuning",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "fine_tuning",
+      "question": "Как обучался BERT: MLM и NSP",
+      "keywords": [
+        "LoRA",
+        "QLoRA",
+        "SFT",
+        "catastrophic forgetting",
+        "rank"
+      ]
+    },
+    {
+      "id": "fine_tuning_003",
+      "category": "nlp_llm",
+      "section": "fine_tuning",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "fine_tuning",
+      "question": "Что такое Fine-tuning, чем отличается от Pre-training и какие этапы обучения LLM существуют: Pre-training, SFT, Alignment",
+      "keywords": [
+        "LoRA",
+        "QLoRA",
+        "SFT",
+        "catastrophic forgetting",
+        "rank"
+      ]
+    },
+    {
+      "id": "fine_tuning_004",
+      "category": "nlp_llm",
+      "section": "fine_tuning",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "fine_tuning",
+      "question": "Что такое LoRA и как она устроена, чем QLoRA отличается от LoRA",
+      "keywords": [
+        "LoRA",
+        "QLoRA",
+        "SFT",
+        "catastrophic forgetting",
+        "rank"
+      ]
+    },
+    {
+      "id": "fine_tuning_005",
+      "category": "nlp_llm",
+      "section": "fine_tuning",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "fine_tuning",
+      "question": "Какой loss используется на этапе SFT",
+      "keywords": [
+        "LoRA",
+        "QLoRA",
+        "SFT",
+        "catastrophic forgetting",
+        "rank"
+      ]
+    },
+    {
+      "id": "fine_tuning_006",
+      "category": "nlp_llm",
+      "section": "fine_tuning",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "fine_tuning",
+      "question": "Что такое P-tuning и Prefix-tuning, чем они отличаются от LoRA",
+      "keywords": [
+        "LoRA",
+        "QLoRA",
+        "SFT",
+        "catastrophic forgetting",
+        "rank"
+      ]
+    },
+    {
+      "id": "fine_tuning_007",
+      "category": "nlp_llm",
+      "section": "fine_tuning",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "fine_tuning",
+      "question": "Как бороться с катастрофическим забыванием",
+      "keywords": [
+        "LoRA",
+        "QLoRA",
+        "SFT",
+        "catastrophic forgetting",
+        "rank"
+      ]
+    },
+    {
+      "id": "fine_tuning_008",
+      "category": "nlp_llm",
+      "section": "fine_tuning",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "fine_tuning",
+      "question": "Что такое In-context Learning: zero-shot, few-shot, CoT",
+      "keywords": [
+        "LoRA",
+        "QLoRA",
+        "SFT",
+        "catastrophic forgetting",
+        "rank"
+      ]
+    },
+    {
+      "id": "fine_tuning_009",
+      "category": "nlp_llm",
+      "section": "fine_tuning",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "fine_tuning",
+      "question": "Как собирать и подготавливать данные для дообучения LLM",
+      "keywords": [
+        "LoRA",
+        "QLoRA",
+        "SFT",
+        "catastrophic forgetting",
+        "rank"
+      ]
+    },
+    {
+      "id": "rag_001",
+      "category": "nlp_llm",
+      "section": "rag",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag",
+      "question": "Что такое RAG и из каких компонентов состоит",
+      "keywords": [
+        "retriever",
+        "reranker",
+        "chunking",
+        "embedding",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "rag_002",
+      "category": "nlp_llm",
+      "section": "rag",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag",
+      "question": "Как подготовить документы для RAG: чанкинг, эмбеддинг, индексация",
+      "keywords": [
+        "retriever",
+        "reranker",
+        "chunking",
+        "embedding",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "rag_003",
+      "category": "nlp_llm",
+      "section": "rag",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag",
+      "question": "Что такое реранкер, зачем нужен, всегда ли используется, и чем эмбеддер (bi-encoder) отличается от реранкера (cross-encoder)",
+      "keywords": [
+        "retriever",
+        "reranker",
+        "chunking",
+        "embedding",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "rag_004",
+      "category": "nlp_llm",
+      "section": "rag",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag",
+      "question": "Какие векторные БД знаешь",
+      "keywords": [
+        "retriever",
+        "reranker",
+        "chunking",
+        "embedding",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "rag_005",
+      "category": "nlp_llm",
+      "section": "rag",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag",
+      "question": "Какие метрики используются для оценки качества RAG",
+      "keywords": [
+        "retriever",
+        "reranker",
+        "chunking",
+        "embedding",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "rag_006",
+      "category": "nlp_llm",
+      "section": "rag",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag",
+      "question": "Что такое гибридный поиск",
+      "keywords": [
+        "retriever",
+        "reranker",
+        "chunking",
+        "embedding",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "rag_007",
+      "category": "nlp_llm",
+      "section": "rag",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag",
+      "question": "Как бороться с галлюцинациями в RAG",
+      "keywords": [
+        "retriever",
+        "reranker",
+        "chunking",
+        "embedding",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "agents_001",
+      "category": "nlp_llm",
+      "section": "agents",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "agents",
+      "question": "Из чего состоит AI-агент и чем отличается от обычной LLM",
+      "keywords": [
+        "tools",
+        "ReAct",
+        "function calling",
+        "structured output",
+        "workflow"
+      ]
+    },
+    {
+      "id": "agents_002",
+      "category": "nlp_llm",
+      "section": "agents",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "agents",
+      "question": "LangChain и LangGraph: что это и использовал ли ты их",
+      "keywords": [
+        "tools",
+        "ReAct",
+        "function calling",
+        "structured output",
+        "workflow"
+      ]
+    },
+    {
+      "id": "agents_003",
+      "category": "nlp_llm",
+      "section": "agents",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "agents",
+      "question": "Как реализован механизм вызова инструментов (tools)",
+      "keywords": [
+        "tools",
+        "ReAct",
+        "function calling",
+        "structured output",
+        "workflow"
+      ]
+    },
+    {
+      "id": "agents_004",
+      "category": "nlp_llm",
+      "section": "agents",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "agents",
+      "question": "Что такое ReAct-агенты и как они работают",
+      "keywords": [
+        "tools",
+        "ReAct",
+        "function calling",
+        "structured output",
+        "workflow"
+      ]
+    },
+    {
+      "id": "agents_005",
+      "category": "nlp_llm",
+      "section": "agents",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "agents",
+      "question": "Как оценивать качество агентов: метрики и библиотеки",
+      "keywords": [
+        "tools",
+        "ReAct",
+        "function calling",
+        "structured output",
+        "workflow"
+      ]
+    },
+    {
+      "id": "agents_006",
+      "category": "nlp_llm",
+      "section": "agents",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "agents",
+      "question": "В чём разница между workflow и агентным подходом",
+      "keywords": [
+        "tools",
+        "ReAct",
+        "function calling",
+        "structured output",
+        "workflow"
+      ]
+    },
+    {
+      "id": "agents_007",
+      "category": "nlp_llm",
+      "section": "agents",
+      "level": "base",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "agents",
+      "question": "Что такое Structured Output и как его добиться",
+      "keywords": [
+        "tools",
+        "ReAct",
+        "function calling",
+        "structured output",
+        "workflow"
+      ]
+    },
+    {
+      "id": "llm_optimization_001",
+      "category": "nlp_llm",
+      "section": "llm_optimization",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_optimization",
+      "question": "Какие фреймворки для инференса знаешь: vLLM, TensorRT-LLM, llama.cpp",
+      "keywords": []
+    },
+    {
+      "id": "llm_optimization_002",
+      "category": "nlp_llm",
+      "section": "llm_optimization",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_optimization",
+      "question": "Что такое квантизация весов и какие типы существуют",
+      "keywords": []
+    },
+    {
+      "id": "llm_optimization_003",
+      "category": "nlp_llm",
+      "section": "llm_optimization",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_optimization",
+      "question": "Что такое дистилляция",
+      "keywords": []
+    },
+    {
+      "id": "llm_optimization_004",
+      "category": "nlp_llm",
+      "section": "llm_optimization",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_optimization",
+      "question": "Что такое Gradient Accumulation и что делать если GPU не позволяет использовать большой batch size",
+      "keywords": []
+    },
+    {
+      "id": "alignment_001",
+      "category": "nlp_llm",
+      "section": "alignment",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "alignment",
+      "question": "Что такое RLHF и из каких этапов состоит",
+      "keywords": [
+        "RLHF",
+        "DPO",
+        "PPO",
+        "GRPO",
+        "reward model"
+      ]
+    },
+    {
+      "id": "alignment_002",
+      "category": "nlp_llm",
+      "section": "alignment",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "alignment",
+      "question": "Что такое DPO и чем отличается от PPO",
+      "keywords": [
+        "RLHF",
+        "DPO",
+        "PPO",
+        "GRPO",
+        "reward model"
+      ]
+    },
+    {
+      "id": "alignment_003",
+      "category": "nlp_llm",
+      "section": "alignment",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "alignment",
+      "question": "Что такое GRPO и чем отличается от PPO",
+      "keywords": [
+        "RLHF",
+        "DPO",
+        "PPO",
+        "GRPO",
+        "reward model"
+      ]
+    },
+    {
+      "id": "alignment_004",
+      "category": "nlp_llm",
+      "section": "alignment",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "alignment",
+      "question": "Какие преимущества и недостатки у PPO и GRPO",
+      "keywords": [
+        "RLHF",
+        "DPO",
+        "PPO",
+        "GRPO",
+        "reward model"
+      ]
+    },
+    {
+      "id": "alignment_005",
+      "category": "nlp_llm",
+      "section": "alignment",
+      "level": "base",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "alignment",
+      "question": "Какой метод чаще используется для обучения современных reasoning-моделей и почему",
+      "keywords": [
+        "RLHF",
+        "DPO",
+        "PPO",
+        "GRPO",
+        "reward model"
+      ]
+    },
+    {
+      "id": "retrieval_embeddings_001",
+      "category": "advanced",
+      "section": "retrieval_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "retrieval_embeddings",
+      "question": "Что такое embedding space и почему близость в нём зависит от задачи",
+      "keywords": [
+        "cosine similarity",
+        "HNSW",
+        "ANN",
+        "hard negatives",
+        "chunk size"
+      ]
+    },
+    {
+      "id": "retrieval_embeddings_002",
+      "category": "advanced",
+      "section": "retrieval_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "retrieval_embeddings",
+      "question": "Cosine similarity vs dot product vs L2 distance: в чём разница и когда что выбирать",
+      "keywords": [
+        "cosine similarity",
+        "HNSW",
+        "ANN",
+        "hard negatives",
+        "chunk size"
+      ]
+    },
+    {
+      "id": "retrieval_embeddings_003",
+      "category": "advanced",
+      "section": "retrieval_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "retrieval_embeddings",
+      "question": "Что такое ANN-поиск и как на высоком уровне работают HNSW, IVF и PQ",
+      "keywords": [
+        "cosine similarity",
+        "HNSW",
+        "ANN",
+        "hard negatives",
+        "chunk size"
+      ]
+    },
+    {
+      "id": "retrieval_embeddings_004",
+      "category": "advanced",
+      "section": "retrieval_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "retrieval_embeddings",
+      "question": "Recall@k, MRR и NDCG: что измеряют и когда уместны",
+      "keywords": [
+        "cosine similarity",
+        "HNSW",
+        "ANN",
+        "hard negatives",
+        "chunk size"
+      ]
+    },
+    {
+      "id": "retrieval_embeddings_005",
+      "category": "advanced",
+      "section": "retrieval_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "retrieval_embeddings",
+      "question": "Как выбирать chunk size и overlap и почему это trade-off",
+      "keywords": [
+        "cosine similarity",
+        "HNSW",
+        "ANN",
+        "hard negatives",
+        "chunk size"
+      ]
+    },
+    {
+      "id": "retrieval_embeddings_006",
+      "category": "advanced",
+      "section": "retrieval_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "retrieval_embeddings",
+      "question": "Что такое query expansion, multi-query retrieval и HyDE и когда они помогают",
+      "keywords": [
+        "cosine similarity",
+        "HNSW",
+        "ANN",
+        "hard negatives",
+        "chunk size"
+      ]
+    },
+    {
+      "id": "retrieval_embeddings_007",
+      "category": "advanced",
+      "section": "retrieval_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "retrieval_embeddings",
+      "question": "Что такое hard negatives и зачем они нужны при обучении retriever",
+      "keywords": [
+        "cosine similarity",
+        "HNSW",
+        "ANN",
+        "hard negatives",
+        "chunk size"
+      ]
+    },
+    {
+      "id": "sentence_embeddings_001",
+      "category": "advanced",
+      "section": "sentence_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "sentence_embeddings",
+      "question": "Чем token embeddings отличаются от sentence embeddings",
+      "keywords": []
+    },
+    {
+      "id": "sentence_embeddings_002",
+      "category": "advanced",
+      "section": "sentence_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "sentence_embeddings",
+      "question": "Почему CLS pooling часто хуже mean pooling для retrieval",
+      "keywords": []
+    },
+    {
+      "id": "sentence_embeddings_003",
+      "category": "advanced",
+      "section": "sentence_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "sentence_embeddings",
+      "question": "Что такое bi-encoder и cross-encoder и как выбрать между ними",
+      "keywords": []
+    },
+    {
+      "id": "sentence_embeddings_004",
+      "category": "advanced",
+      "section": "sentence_embeddings",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "sentence_embeddings",
+      "question": "Что такое SBERT и зачем он появился",
+      "keywords": []
+    },
+    {
+      "id": "seq2seq_generation_001",
+      "category": "advanced",
+      "section": "seq2seq_generation",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "seq2seq_generation",
+      "question": "Когда лучше encoder-decoder, а когда decoder-only архитектура",
+      "keywords": []
+    },
+    {
+      "id": "seq2seq_generation_002",
+      "category": "advanced",
+      "section": "seq2seq_generation",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "seq2seq_generation",
+      "question": "Как устроено обучение seq2seq с teacher forcing",
+      "keywords": []
+    },
+    {
+      "id": "seq2seq_generation_003",
+      "category": "advanced",
+      "section": "seq2seq_generation",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "seq2seq_generation",
+      "question": "Почему T5 формулирует задачи как text-to-text",
+      "keywords": []
+    },
+    {
+      "id": "seq2seq_generation_004",
+      "category": "advanced",
+      "section": "seq2seq_generation",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "seq2seq_generation",
+      "question": "Что такое exposure bias и почему beam search иногда даёт хуже тексты чем sampling",
+      "keywords": []
+    },
+    {
+      "id": "seq2seq_generation_005",
+      "category": "advanced",
+      "section": "seq2seq_generation",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "seq2seq_generation",
+      "question": "Что такое repetition penalty, length penalty и no-repeat n-gram",
+      "keywords": []
+    },
+    {
+      "id": "seq2seq_generation_006",
+      "category": "advanced",
+      "section": "seq2seq_generation",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "seq2seq_generation",
+      "question": "Что такое repetition penalty, length penalty и no-repeat n-gram",
+      "keywords": []
+    },
+    {
+      "id": "seq2seq_generation_007",
+      "category": "advanced",
+      "section": "seq2seq_generation",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "seq2seq_generation",
+      "question": "Что такое speculative decoding и зачем он нужен",
+      "keywords": []
+    },
+    {
+      "id": "seq2seq_generation_008",
+      "category": "advanced",
+      "section": "seq2seq_generation",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "seq2seq_generation",
+      "question": "Как работает draft model и verification step в speculative decoding",
+      "keywords": []
+    },
+    {
+      "id": "seq2seq_generation_009",
+      "category": "advanced",
+      "section": "seq2seq_generation",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "seq2seq_generation",
+      "question": "Какие трейдоффы у speculative decoding в продакшне",
+      "keywords": []
+    },
+    {
+      "id": "flash_attention_001",
+      "category": "advanced",
+      "section": "flash_attention",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "flash_attention",
+      "question": "Что такое Flash Attention и какую проблему решает",
+      "keywords": []
+    },
+    {
+      "id": "flash_attention_002",
+      "category": "advanced",
+      "section": "flash_attention",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "flash_attention",
+      "question": "Как Flash Attention работает с памятью по сравнению со стандартным attention",
+      "keywords": []
+    },
+    {
+      "id": "flash_attention_003",
+      "category": "advanced",
+      "section": "flash_attention",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "flash_attention",
+      "question": "Какие трейдоффы у Flash Attention и когда его применять",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_001",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Как system / user / assistant роли влияют на поведение модели",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_002",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Когда few-shot prompting помогает, а когда может мешать",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_003",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Как динамически подбирать few-shot примеры и когда retrieval-based few-shot лучше фиксированного набора",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_004",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Что такое Chain-of-Thought, Self-Consistency и Tree-of-Thought на высоком уровне",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_005",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Почему prompt sensitivity — проблема",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_006",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Что такое prompt injection, jailbreak и prompt leakage",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_007",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Какие guardrails используют в LLM-системах: rule-based, classifier-based, LLM-as-a-judge",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_008",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Offline vs online evaluation для LLM-продуктов: в чём разница",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_009",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Как оценивать groundedness, faithfulness и helpfulness",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_010",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Почему perplexity плохо коррелирует с реальной полезностью ответа",
+      "keywords": []
+    },
+    {
+      "id": "prompting_safety_011",
+      "category": "advanced",
+      "section": "prompting_safety",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "prompting_safety",
+      "question": "Как оценивать tool-use и agent trajectories",
+      "keywords": []
+    },
+    {
+      "id": "serving_production_001",
+      "category": "advanced",
+      "section": "serving_production",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "serving_production",
+      "question": "Throughput vs latency: в чём разница и как между ними выбирать",
+      "keywords": [
+        "latency",
+        "throughput",
+        "batching",
+        "quantization",
+        "KV cache"
+      ]
+    },
+    {
+      "id": "serving_production_002",
+      "category": "advanced",
+      "section": "serving_production",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "serving_production",
+      "question": "Что такое batching и continuous batching",
+      "keywords": [
+        "latency",
+        "throughput",
+        "batching",
+        "quantization",
+        "KV cache"
+      ]
+    },
+    {
+      "id": "serving_production_003",
+      "category": "advanced",
+      "section": "serving_production",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "serving_production",
+      "question": "Почему KV cache ускоряет инференс, но увеличивает потребление памяти",
+      "keywords": [
+        "latency",
+        "throughput",
+        "batching",
+        "quantization",
+        "KV cache"
+      ]
+    },
+    {
+      "id": "serving_production_004",
+      "category": "advanced",
+      "section": "serving_production",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "serving_production",
+      "question": "Что такое tensor parallelism, pipeline parallelism и data parallelism на высоком уровне",
+      "keywords": [
+        "latency",
+        "throughput",
+        "batching",
+        "quantization",
+        "KV cache"
+      ]
+    },
+    {
+      "id": "serving_production_005",
+      "category": "advanced",
+      "section": "serving_production",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "serving_production",
+      "question": "Почему длинный контекст дорогой",
+      "keywords": [
+        "latency",
+        "throughput",
+        "batching",
+        "quantization",
+        "KV cache"
+      ]
+    },
+    {
+      "id": "serving_production_006",
+      "category": "advanced",
+      "section": "serving_production",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "serving_production",
+      "question": "Что такое prefix caching и когда он полезен",
+      "keywords": [
+        "latency",
+        "throughput",
+        "batching",
+        "quantization",
+        "KV cache"
+      ]
+    },
+    {
+      "id": "serving_production_007",
+      "category": "advanced",
+      "section": "serving_production",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "serving_production",
+      "question": "CPU vs GPU vs quantized inference: основные trade-offs",
+      "keywords": [
+        "latency",
+        "throughput",
+        "batching",
+        "quantization",
+        "KV cache"
+      ]
+    },
+    {
+      "id": "llm_evals_001",
+      "category": "advanced",
+      "section": "llm_evals",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_evals",
+      "question": "Чем отличаются retrieval eval и answer eval и почему нельзя сводить качество RAG к одной метрике",
+      "keywords": []
+    },
+    {
+      "id": "llm_evals_002",
+      "category": "advanced",
+      "section": "llm_evals",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_evals",
+      "question": "Pointwise vs pairwise LLM-as-a-judge: в чём разница, плюсы и минусы, когда какой подход надёжнее",
+      "keywords": []
+    },
+    {
+      "id": "llm_evals_003",
+      "category": "advanced",
+      "section": "llm_evals",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_evals",
+      "question": "Как собирать test set / regression set для LLM-продукта",
+      "keywords": []
+    },
+    {
+      "id": "llm_evals_004",
+      "category": "advanced",
+      "section": "llm_evals",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_evals",
+      "question": "Что такое slice-based evaluation и какие срезы стоит проверять отдельно",
+      "keywords": []
+    },
+    {
+      "id": "llm_evals_005",
+      "category": "advanced",
+      "section": "llm_evals",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_evals",
+      "question": "Failure taxonomy для LLM / RAG / agents: retrieval miss, grounding miss, reasoning miss, tool failure",
+      "keywords": []
+    },
+    {
+      "id": "practical_finetuning_001",
+      "category": "advanced",
+      "section": "practical_finetuning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "practical_finetuning",
+      "question": "Что делает instruction tuning dataset качественным: coverage, consistency, formatting, difficulty",
+      "keywords": [
+        "packing",
+        "truncation",
+        "FSDP",
+        "ZeRO",
+        "tensor parallelism"
+      ]
+    },
+    {
+      "id": "practical_finetuning_002",
+      "category": "advanced",
+      "section": "practical_finetuning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "practical_finetuning",
+      "question": "Packing и truncation trade-offs при fine-tuning",
+      "keywords": [
+        "packing",
+        "truncation",
+        "FSDP",
+        "ZeRO",
+        "tensor parallelism"
+      ]
+    },
+    {
+      "id": "practical_finetuning_003",
+      "category": "advanced",
+      "section": "practical_finetuning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "practical_finetuning",
+      "question": "Почему full fine-tuning на практике нужен редко и когда он оправдан",
+      "keywords": [
+        "packing",
+        "truncation",
+        "FSDP",
+        "ZeRO",
+        "tensor parallelism"
+      ]
+    },
+    {
+      "id": "practical_finetuning_004",
+      "category": "advanced",
+      "section": "practical_finetuning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "practical_finetuning",
+      "question": "Как выбирать между prompting, RAG и fine-tuning под конкретную задачу",
+      "keywords": [
+        "packing",
+        "truncation",
+        "FSDP",
+        "ZeRO",
+        "tensor parallelism"
+      ]
+    },
+    {
+      "id": "practical_finetuning_005",
+      "category": "advanced",
+      "section": "practical_finetuning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "practical_finetuning",
+      "question": "Catastrophic forgetting на практике: как проявляется и как снижать",
+      "keywords": [
+        "packing",
+        "truncation",
+        "FSDP",
+        "ZeRO",
+        "tensor parallelism"
+      ]
+    },
+    {
+      "id": "practical_finetuning_006",
+      "category": "advanced",
+      "section": "practical_finetuning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "practical_finetuning",
+      "question": "Что делать если веса модели, градиенты и optimizer states не помещаются на одну GPU: gradient accumulation, checkpointing, LoRA, FSDP, DeepSpeed ZeRO",
+      "keywords": [
+        "packing",
+        "truncation",
+        "FSDP",
+        "ZeRO",
+        "tensor parallelism"
+      ]
+    },
+    {
+      "id": "practical_finetuning_007",
+      "category": "advanced",
+      "section": "practical_finetuning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "practical_finetuning",
+      "question": "Какие виды параллелизма используются при обучении больших моделей: data, tensor, pipeline",
+      "keywords": [
+        "packing",
+        "truncation",
+        "FSDP",
+        "ZeRO",
+        "tensor parallelism"
+      ]
+    },
+    {
+      "id": "practical_finetuning_008",
+      "category": "advanced",
+      "section": "practical_finetuning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "practical_finetuning",
+      "question": "Чем tensor parallelism отличается от pipeline parallelism и когда что выбирать",
+      "keywords": [
+        "packing",
+        "truncation",
+        "FSDP",
+        "ZeRO",
+        "tensor parallelism"
+      ]
+    },
+    {
+      "id": "production_reasoning_001",
+      "category": "advanced",
+      "section": "production_reasoning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "production_reasoning",
+      "question": "Что обычно сильнее всего бьёт по latency в LLM-системе: retrieval, reranking, prompt building, generation, network, tool calls",
+      "keywords": [
+        "latency",
+        "bottleneck",
+        "reranker",
+        "context window",
+        "quantization"
+      ]
+    },
+    {
+      "id": "production_reasoning_002",
+      "category": "advanced",
+      "section": "production_reasoning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "production_reasoning",
+      "question": "Как понять где bottleneck: retrieval, reranker или generation",
+      "keywords": [
+        "latency",
+        "bottleneck",
+        "reranker",
+        "context window",
+        "quantization"
+      ]
+    },
+    {
+      "id": "production_reasoning_003",
+      "category": "advanced",
+      "section": "production_reasoning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "production_reasoning",
+      "question": "Какие сигналы указывают на bottleneck в каждом из слоёв LLM-системы",
+      "keywords": [
+        "latency",
+        "bottleneck",
+        "reranker",
+        "context window",
+        "quantization"
+      ]
+    },
+    {
+      "id": "production_reasoning_004",
+      "category": "advanced",
+      "section": "production_reasoning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "production_reasoning",
+      "question": "Когда reranker реально не нужен",
+      "keywords": [
+        "latency",
+        "bottleneck",
+        "reranker",
+        "context window",
+        "quantization"
+      ]
+    },
+    {
+      "id": "production_reasoning_005",
+      "category": "advanced",
+      "section": "production_reasoning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "production_reasoning",
+      "question": "Когда длинный контекст хуже хорошего retrieval",
+      "keywords": [
+        "latency",
+        "bottleneck",
+        "reranker",
+        "context window",
+        "quantization"
+      ]
+    },
+    {
+      "id": "production_reasoning_006",
+      "category": "advanced",
+      "section": "production_reasoning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "production_reasoning",
+      "question": "Почему beam search часто не нужен в chat-style LLM",
+      "keywords": [
+        "latency",
+        "bottleneck",
+        "reranker",
+        "context window",
+        "quantization"
+      ]
+    },
+    {
+      "id": "production_reasoning_007",
+      "category": "advanced",
+      "section": "production_reasoning",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "production_reasoning",
+      "question": "Когда quantization acceptable, а когда начинает ломать качество модели",
+      "keywords": [
+        "latency",
+        "bottleneck",
+        "reranker",
+        "context window",
+        "quantization"
+      ]
+    },
+    {
+      "id": "grpo_advanced_001",
+      "category": "advanced",
+      "section": "grpo_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "grpo_advanced",
+      "question": "Что такое GRPO и чем отличается от PPO",
+      "keywords": []
+    },
+    {
+      "id": "grpo_advanced_002",
+      "category": "advanced",
+      "section": "grpo_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "grpo_advanced",
+      "question": "Какие преимущества GRPO перед PPO при обучении reasoning моделей",
+      "keywords": []
+    },
+    {
+      "id": "grpo_advanced_003",
+      "category": "advanced",
+      "section": "grpo_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "grpo_advanced",
+      "question": "Почему GRPO чаще используется в современных reasoning моделях чем PPO",
+      "keywords": []
+    },
+    {
+      "id": "reasoning_models_001",
+      "category": "advanced",
+      "section": "reasoning_models",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "reasoning_models",
+      "question": "Что такое System 1 и System 2 мышление в контексте LLM и чем они отличаются",
+      "keywords": [
+        "System 1",
+        "System 2",
+        "Mamba",
+        "SSM",
+        "GraphRAG"
+      ]
+    },
+    {
+      "id": "reasoning_models_002",
+      "category": "advanced",
+      "section": "reasoning_models",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "reasoning_models",
+      "question": "Как обучаются reasoning модели (System 2): chain-of-thought, process reward models",
+      "keywords": [
+        "System 1",
+        "System 2",
+        "Mamba",
+        "SSM",
+        "GraphRAG"
+      ]
+    },
+    {
+      "id": "reasoning_models_003",
+      "category": "advanced",
+      "section": "reasoning_models",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "reasoning_models",
+      "question": "Почему Mamba и RWKV могут заменить трансформер: State Space Models vs Attention",
+      "keywords": [
+        "System 1",
+        "System 2",
+        "Mamba",
+        "SSM",
+        "GraphRAG"
+      ]
+    },
+    {
+      "id": "reasoning_models_004",
+      "category": "advanced",
+      "section": "reasoning_models",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "reasoning_models",
+      "question": "Чем State Space Models отличаются от механизма Attention принципиально",
+      "keywords": [
+        "System 1",
+        "System 2",
+        "Mamba",
+        "SSM",
+        "GraphRAG"
+      ]
+    },
+    {
+      "id": "reasoning_models_005",
+      "category": "advanced",
+      "section": "reasoning_models",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "reasoning_models",
+      "question": "GraphRAG: что это такое и когда он превосходит обычный векторный поиск",
+      "keywords": [
+        "System 1",
+        "System 2",
+        "Mamba",
+        "SSM",
+        "GraphRAG"
+      ]
+    },
+    {
+      "id": "reasoning_models_006",
+      "category": "advanced",
+      "section": "reasoning_models",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "reasoning_models",
+      "question": "Если у модели контекст 2 млн токенов — нужен ли RAG и почему обычный RAG всё равно актуален",
+      "keywords": [
+        "System 1",
+        "System 2",
+        "Mamba",
+        "SSM",
+        "GraphRAG"
+      ]
+    },
+    {
+      "id": "reasoning_models_007",
+      "category": "advanced",
+      "section": "reasoning_models",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "reasoning_models",
+      "question": "Как построить систему оценки LLM которую модель не сможет обмануть",
+      "keywords": [
+        "System 1",
+        "System 2",
+        "Mamba",
+        "SSM",
+        "GraphRAG"
+      ]
+    },
+    {
+      "id": "reasoning_models_008",
+      "category": "advanced",
+      "section": "reasoning_models",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "reasoning_models",
+      "question": "Contamination в evaluation: что это, почему проблема и как бороться",
+      "keywords": [
+        "System 1",
+        "System 2",
+        "Mamba",
+        "SSM",
+        "GraphRAG"
+      ]
+    },
+    {
+      "id": "reasoning_models_009",
+      "category": "advanced",
+      "section": "reasoning_models",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "reasoning_models",
+      "question": "LLM-as-a-Judge: какие bias есть у модели-судьи и как их митигировать",
+      "keywords": [
+        "System 1",
+        "System 2",
+        "Mamba",
+        "SSM",
+        "GraphRAG"
+      ]
+    },
+    {
+      "id": "large_model_training_001",
+      "category": "advanced",
+      "section": "large_model_training",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "large_model_training",
+      "question": "Как фильтровать 100 ТБ сырых данных из интернета для претрейна: качество, дедупликация, токсичность",
+      "keywords": []
+    },
+    {
+      "id": "large_model_training_002",
+      "category": "advanced",
+      "section": "large_model_training",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "large_model_training",
+      "question": "Как обучить модель на 70B параметров если она не влезает в память одной ноды",
+      "keywords": []
+    },
+    {
+      "id": "large_model_training_003",
+      "category": "advanced",
+      "section": "large_model_training",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "large_model_training",
+      "question": "В чём разница между FSDP и ZeRO-3 от DeepSpeed: архитектура, трейдоффы, когда что выбирать",
+      "keywords": []
+    },
+    {
+      "id": "llm_labeling_001",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Когда LLM-разметка лучше ручной и какие у неё ограничения",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_002",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как строить пайплайн LLM-разметки: промпт, тест, метрики, итерации",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_003",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Что такое self-consistency в разметке и как агрегировать вердикты нескольких моделей",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_004",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как бороться с байесами LLM при разметке: байес позиции, байес длины",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_005",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Когда переходить от LLM-разметки к ручной: сигналы и пороги",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_006",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как строить гибридный пайплайн LLM + люди: гейт по уверенности, active learning",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_007",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Что такое контроль качества в краудсорсинге: ханипоты, согласованность, агрегация",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_008",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как версионировать данные и промпты в продакшн ML-системе",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "text_classification_001",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Какие подходы к текстовой классификации существуют: дотрансформерные, энкодерные, LLM, промпты — когда что выбирать",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_002",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Как выстроить правильную последовательность шагов при решении задачи классификации: от бизнес-метрик до деплоя",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_003",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Как сделать мультиклассовую классификацию с динамическим набором классов который меняется со временем",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_004",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Когда замораживать эмбеддер и обучать только голову, а когда файнтюнить всю модель",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_005",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Как бороться с дисбалансом классов в текстовой классификации",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_006",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Как реализовать multi-label multi-class классификацию: архитектура, лоссы, головы",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_007",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Что такое label embeddings и когда они помогают при большом числе классов",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_008",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Как дистиллировать большой трансформер в FFN или fastText для инференса без GPU",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_009",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Как выстроить иерархическую классификацию: лёгкая модель фильтрует кандидатов, тяжёлая уточняет",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_010",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Что такое data drift и как его мониторить и решать в продакшн классификаторе",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_011",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Как организовать хотфиксы классификатора через систему правил в продакшне",
+      "keywords": []
+    },
+    {
+      "id": "text_classification_012",
+      "category": "system_design",
+      "section": "text_classification",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "text_classification",
+      "question": "Как обеспечить отказоустойчивость если GPU-сервис упал: fallback стратегии",
+      "keywords": []
+    },
+    {
+      "id": "clustering_001",
+      "category": "system_design",
+      "section": "clustering",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "clustering",
+      "question": "Какие алгоритмы кластеризации используются в NLP задачах и когда что выбирать",
+      "keywords": []
+    },
+    {
+      "id": "clustering_002",
+      "category": "system_design",
+      "section": "clustering",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "clustering",
+      "question": "Чем HDBSCAN лучше DBSCAN и когда его применять",
+      "keywords": []
+    },
+    {
+      "id": "clustering_003",
+      "category": "system_design",
+      "section": "clustering",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "clustering",
+      "question": "Как работает Mini-Batch KMeans и зачем он нужен для онлайн кластеризации",
+      "keywords": []
+    },
+    {
+      "id": "clustering_004",
+      "category": "system_design",
+      "section": "clustering",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "clustering",
+      "question": "Как использовать FAISS с эвристиками для кластеризации в реальном времени",
+      "keywords": []
+    },
+    {
+      "id": "clustering_005",
+      "category": "system_design",
+      "section": "clustering",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "clustering",
+      "question": "Что такое autoencoder clustering и когда он нужен vs классические методы",
+      "keywords": []
+    },
+    {
+      "id": "clustering_006",
+      "category": "system_design",
+      "section": "clustering",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "clustering",
+      "question": "Как снижать размерность эмбеддингов перед кластеризацией и зачем",
+      "keywords": []
+    },
+    {
+      "id": "clustering_007",
+      "category": "system_design",
+      "section": "clustering",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "clustering",
+      "question": "Как интерпретировать кластеры и делать выводы для бизнеса",
+      "keywords": []
+    },
+    {
+      "id": "ner_001",
+      "category": "system_design",
+      "section": "ner",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "ner",
+      "question": "Когда использовать готовые NER библиотеки (spaCy, Natasha) vs дообучать свой BERT",
+      "keywords": []
+    },
+    {
+      "id": "ner_002",
+      "category": "system_design",
+      "section": "ner",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "ner",
+      "question": "Как обучить BERT на задачу NER: BIO-разметка, соотнесение токенов со словами",
+      "keywords": []
+    },
+    {
+      "id": "ner_003",
+      "category": "system_design",
+      "section": "ner",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "ner",
+      "question": "Когда LLM лучше BERT для NER и наоборот — практические критерии",
+      "keywords": []
+    },
+    {
+      "id": "ner_004",
+      "category": "system_design",
+      "section": "ner",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "ner",
+      "question": "Как бороться с галлюцинациями LLM при NER через многоуровневую валидацию",
+      "keywords": []
+    },
+    {
+      "id": "ner_005",
+      "category": "system_design",
+      "section": "ner",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "ner",
+      "question": "Как решать проблему размытых границ сущностей и редких сущностей",
+      "keywords": []
+    },
+    {
+      "id": "ner_006",
+      "category": "system_design",
+      "section": "ner",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "ner",
+      "question": "Как использовать NER для ранжирования в поиске маркетплейса",
+      "keywords": []
+    },
+    {
+      "id": "ner_007",
+      "category": "system_design",
+      "section": "ner",
+      "level": "advanced",
+      "priority": "important",
+      "depth": "medium",
+      "topic_cluster": "ner",
+      "question": "Как дизайнить NER систему для финансовых документов с требованием precision ~99%",
+      "keywords": []
+    },
+    {
+      "id": "domain_adaptation_001",
+      "category": "system_design",
+      "section": "domain_adaptation",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "domain_adaptation",
+      "question": "Когда нужна доменная адаптация и когда хватает промптинга",
+      "keywords": [
+        "CPT",
+        "SFT",
+        "LoRA",
+        "токенизатор",
+        "датамикс"
+      ]
+    },
+    {
+      "id": "domain_adaptation_002",
+      "category": "system_design",
+      "section": "domain_adaptation",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "domain_adaptation",
+      "question": "Чем CPT отличается от SFT и когда что применять",
+      "keywords": [
+        "CPT",
+        "SFT",
+        "LoRA",
+        "токенизатор",
+        "датамикс"
+      ]
+    },
+    {
+      "id": "domain_adaptation_003",
+      "category": "system_design",
+      "section": "domain_adaptation",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "domain_adaptation",
+      "question": "Как выстроить двухстадийный CPT: Stage 1 и Stage 2 данные, почему важен порядок",
+      "keywords": [
+        "CPT",
+        "SFT",
+        "LoRA",
+        "токенизатор",
+        "датамикс"
+      ]
+    },
+    {
+      "id": "domain_adaptation_004",
+      "category": "system_design",
+      "section": "domain_adaptation",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "domain_adaptation",
+      "question": "Как собрать датамикс для доменного претрейна: источники, веса, пропорции",
+      "keywords": [
+        "CPT",
+        "SFT",
+        "LoRA",
+        "токенизатор",
+        "датамикс"
+      ]
+    },
+    {
+      "id": "domain_adaptation_005",
+      "category": "system_design",
+      "section": "domain_adaptation",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "domain_adaptation",
+      "question": "Когда адаптировать токенизатор под домен и как это делается",
+      "keywords": [
+        "CPT",
+        "SFT",
+        "LoRA",
+        "токенизатор",
+        "датамикс"
+      ]
+    },
+    {
+      "id": "domain_adaptation_006",
+      "category": "system_design",
+      "section": "domain_adaptation",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "domain_adaptation",
+      "question": "Как использовать LoRA для доменной адаптации: плюсы, минусы, риски",
+      "keywords": [
+        "CPT",
+        "SFT",
+        "LoRA",
+        "токенизатор",
+        "датамикс"
+      ]
+    },
+    {
+      "id": "domain_adaptation_007",
+      "category": "system_design",
+      "section": "domain_adaptation",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "domain_adaptation",
+      "question": "Как бороться с галлюцинациями после CPT: синтетический QA, батчлоадер",
+      "keywords": [
+        "CPT",
+        "SFT",
+        "LoRA",
+        "токенизатор",
+        "датамикс"
+      ]
+    },
+    {
+      "id": "domain_adaptation_008",
+      "category": "system_design",
+      "section": "domain_adaptation",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "domain_adaptation",
+      "question": "Как избежать lang-swaps после доменного дообучения",
+      "keywords": [
+        "CPT",
+        "SFT",
+        "LoRA",
+        "токенизатор",
+        "датамикс"
+      ]
+    },
+    {
+      "id": "domain_adaptation_009",
+      "category": "system_design",
+      "section": "domain_adaptation",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "domain_adaptation",
+      "question": "Как валидировать качество доменной адаптации: бенчмарки, внутренние корзинки",
+      "keywords": [
+        "CPT",
+        "SFT",
+        "LoRA",
+        "токенизатор",
+        "датамикс"
+      ]
+    },
+    {
+      "id": "search_systems_001",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Как устроена архитектура поисковой системы: прямой и обратный индекс",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "search_systems_002",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Как работает BM25: формула, параметры k и b, когда что настраивать",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "search_systems_003",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Когда полнотекстовый поиск лучше векторного и наоборот",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "search_systems_004",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Как построить гибридный поиск: параллельный vs иерархический режим",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "search_systems_005",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Как шардировать индекс на кластер и почему это нужно",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "search_systems_006",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Чем OpenSearch отличается от QDrant и когда что выбирать",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "search_systems_007",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Как устроен HNSW: NSW + список с пропусками, параметры m и ef",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "search_systems_008",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Как собирать данные и обучать модель переранжирования для высокочастотных и низкочастотных запросов",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "search_systems_009",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Как измерять качество поиска: DCG, nDCG, MAP, PR-AUC — когда что использовать",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "search_systems_010",
+      "category": "system_design",
+      "section": "search_systems",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "search_systems",
+      "question": "Как строить поиск с нуля для маленького каталога vs большого маркетплейса",
+      "keywords": [
+        "BM25",
+        "HNSW",
+        "inverted index",
+        "hybrid search",
+        "reranking"
+      ]
+    },
+    {
+      "id": "rag_advanced_001",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Как дебажить RAG: категории проблем и как их локализовать",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_002",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Когда проблема в ретривере, когда в реранкере, когда в генераторе — как диагностировать",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_003",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Как тюнить эмбеддер под доменный поиск: contrastive learning, hard negatives",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_004",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Как обучать реранкер для RAG: позитивы, негативы, таргеты",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_005",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Как фильтровать базу документов: дубли, мусор, устаревшие, сгенерированные",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_006",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Как выбирать стратегию чанкинга: фиксированный размер, по структуре, embedding-based",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_007",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Как обрабатывать непонятные запросы: перефразирование, расширение, извлечение ключевых слов",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_008",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Как дообучать генератор под RAG задачу: SFT на ответах по источникам",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_009",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Как обучать reward models для alignment генератора: полезность, достоверность, этичность",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_010",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Как ускорять RAG пайплайн: классификатор срабатываний, кэш частотных запросов, квантизация",
+      "keywords": []
+    },
+    {
+      "id": "rag_advanced_011",
+      "category": "system_design",
+      "section": "rag_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "rag_advanced",
+      "question": "Когда делать дорогой RAG с реранкером и дообученным генератором, а когда хватает бейзлайна",
+      "keywords": []
+    },
+    {
+      "id": "agents_advanced_001",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Как дизайнить мультиагентную систему: агент-менеджер и агенты-исполнители",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "agents_advanced_002",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Как применять single responsibility principle к дизайну тулзов агента",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "agents_advanced_003",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Как решать проблему циклов и застреваний агента: planning, critic модель",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "agents_advanced_004",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Что такое Process Reward Model (PRM) и как она улучшает качество агентов",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "agents_advanced_005",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Чем ORM отличается от PRM и когда что использовать",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "agents_advanced_006",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Как собирать датасет для обучения агента: синтетика, стенды, ломаные траектории",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "agents_advanced_007",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Когда использовать SFT vs DPO для улучшения агента",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "agents_advanced_008",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Что такое RLVR и когда его применять для агентов",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "agents_advanced_009",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Как выстроить guardrails для агента: классификаторы, контейнеры, Llama-Guard",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "agents_advanced_010",
+      "category": "system_design",
+      "section": "agents_advanced",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "agents_advanced",
+      "question": "Как оценивать качество агентских траекторий: метрики, автоматические проверки",
+      "keywords": [
+        "PRM",
+        "ORM",
+        "multi-agent",
+        "planning",
+        "critic"
+      ]
+    },
+    {
+      "id": "llm_labeling_009",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Когда LLM-разметка лучше ручной и когда наоборот: критерии выбора",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_010",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как итеративно улучшать промпт для разметки: автометрики, ручная проверка, тюнинг",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_011",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Chain-of-thought при разметке: зачем просить рассуждения перед вердиктом",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_012",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Self-consistency при LLM-разметке: как агрегировать несколько запусков",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_013",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как бороться с байесами позиции и длины в LLM-судье",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_014",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Комбинированный подход LLM + люди: как делить простые и сложные примеры",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_015",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как использовать active learning для экономии бюджета разметки",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_016",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как контролировать качество крауд-разметки: ханипоты, перекрытие, согласованность",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_017",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как выстроить полный пайплайн крауд-разметки от бизнес-требований до контроля качества",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    },
+    {
+      "id": "llm_labeling_018",
+      "category": "system_design",
+      "section": "llm_labeling",
+      "level": "advanced",
+      "priority": "critical",
+      "depth": "deep",
+      "topic_cluster": "llm_labeling",
+      "question": "Как версионировать данные и промпты для воспроизводимости разметки",
+      "keywords": [
+        "LLM разметка",
+        "self-consistency",
+        "chain-of-thought",
+        "active learning"
+      ]
+    }
+  ]
+}
